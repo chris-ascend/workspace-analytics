@@ -12,6 +12,10 @@ interface Props {
   weekLabels: string[]
 }
 
+function slugify(name: string) {
+  return name.replace(/[^a-z0-9]/gi, '_')
+}
+
 export function InvestmentTrend({
   frontendFeatures,
   backendDomains,
@@ -20,18 +24,18 @@ export function InvestmentTrend({
 }: Props) {
   const allAreas = [...frontendFeatures, ...backendDomains]
 
-  // Build color map from investmentAllocation
-  const colorMap: Record<string, string> = {}
-  for (const b of investmentAllocation) colorMap[b.bucket] = b.color
+  const buckets = investmentAllocation.map(b => ({
+    name: b.bucket,
+    key: slugify(b.bucket),
+    color: b.color,
+  }))
 
-  const buckets = investmentAllocation.map(b => b.bucket)
-
-  // Build weekly data: one entry per week with a key per bucket
+  // Build weekly data: one entry per week with a sanitized key per bucket
   const chartData = weekLabels.map((label, weekIdx) => {
     const entry: Record<string, string | number> = { week: label }
     for (const bucket of buckets) {
-      entry[bucket] = allAreas
-        .filter(a => a.bucket === bucket)
+      entry[bucket.key] = allAreas
+        .filter(a => a.bucket === bucket.name)
         .reduce((sum, a) => sum + (a.weeklyCommits[weekIdx] ?? 0), 0)
     }
     return entry
@@ -67,19 +71,26 @@ export function InvestmentTrend({
               contentStyle={{ background: '#fff', border: '1px solid #e5e7eb', borderRadius: 8 }}
               labelStyle={{ color: '#4a5464', fontSize: 12 }}
               itemStyle={{ fontSize: 11 }}
-              formatter={(v, name) => [`${v} commits`, name]}
+              formatter={(v, key) => {
+                const b = buckets.find(b => b.key === key)
+                return [`${v} commits`, b?.name ?? String(key)]
+              }}
             />
             <Legend
               iconType="circle"
               iconSize={8}
               wrapperStyle={{ fontSize: 11, color: '#4a5464' }}
+              formatter={(key) => {
+                const b = buckets.find(b => b.key === key)
+                return b?.name ?? key
+              }}
             />
             {buckets.map(bucket => (
               <Bar
-                key={bucket}
-                dataKey={bucket}
+                key={bucket.key}
+                dataKey={bucket.key}
                 stackId="a"
-                fill={colorMap[bucket] ?? '#9ca3af'}
+                fill={bucket.color}
               />
             ))}
           </BarChart>
