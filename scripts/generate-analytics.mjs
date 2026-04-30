@@ -4,10 +4,12 @@
  * Run with: node scripts/generate-analytics.mjs
  */
 import { execSync } from 'child_process';
-import { readFileSync, writeFileSync, readdirSync, statSync, mkdirSync, existsSync } from 'fs';
+import { readFileSync, writeFileSync, readdirSync, mkdirSync, existsSync } from 'fs';
 import { join, extname, basename } from 'path';
 
 const WORKSPACE = '/Users/chrisragobeer/development/dev/workspace';
+const FRONTEND_FEATURES_DIR = join(WORKSPACE, 'apps/frontend/src/features');
+const BACKEND_DOMAINS_DIR   = join(WORKSPACE, 'apps/backend/lib/workspacex');
 const OUT = './public/data/analytics.json';
 
 function run(cmd, cwd = WORKSPACE) {
@@ -32,6 +34,14 @@ const LANG_MAP = {
   '.py': 'Python', '.rb': 'Ruby',
 };
 
+// Source-code extensions only (for LOC counts in feature areas)
+const CODE_EXTS = new Set([
+  '.ts', '.tsx', '.js', '.jsx',
+  '.ex', '.exs', '.heex', '.eex',
+  '.css', '.scss', '.sql', '.graphql', '.gql',
+  '.py', '.rb', '.sh',
+]);
+
 const EXCLUDED_DIRS = new Set([
   'node_modules', '_build', 'deps', '.git', 'dist', '.next',
   'coverage', '__pycache__', '.venv', 'priv/static', '.elixir_ls',
@@ -50,7 +60,16 @@ function walkFiles(dir, files = []) {
   return files;
 }
 
-// ── File stats ────────────────────────────────────────────────────────────────
+function countLinesInFiles(files) {
+  let lines = 0;
+  for (const f of files) {
+    if (!CODE_EXTS.has(extname(f).toLowerCase())) continue;
+    try { lines += readFileSync(f, 'utf8').split('\n').length; } catch {}
+  }
+  return lines;
+}
+
+// ── Global file stats ─────────────────────────────────────────────────────────
 console.log('📂 Scanning files…');
 const allFiles = walkFiles(WORKSPACE);
 
@@ -71,11 +90,44 @@ for (const f of allFiles) {
   } catch { /* binary or unreadable */ }
 }
 
-// ── App / package breakdown ───────────────────────────────────────────────────
-const appsDir = join(WORKSPACE, 'apps');
-const packagesDir = join(WORKSPACE, 'packages');
+// ── Frontend feature areas ────────────────────────────────────────────────────
+console.log('🎨 Analyzing frontend feature areas…');
 
-function analyzeDir(baseDir, type) {
+// Human-readable display names
+const FEATURE_LABELS = {
+  prepareTaxWorksheets: 'Prepare Tax Worksheets',
+  pbc:                  'PBC',
+  vision:               'Vision (CRM)',
+  entityTax:            'Entity Tax',
+  questionnaire:        'Questionnaire',
+  dataReview:           'Data Review',
+  agent:                'Agent',
+  projects:             'Projects',
+  clientPortal:         'Client Portal',
+  clientDetails:        'Client Details',
+  clientGroup:          'Client Group',
+  clientList:           'Client List',
+  bor:                  'BOR',
+  dataCleaning:         'Data Cleaning',
+  commandPalette:       'Command Palette',
+  taxDelivery:          'Tax Delivery',
+  taxAdvisory:          'Tax Advisory',
+  k1Matching:           'K-1 Matching',
+  re_engagement:        'Re-engagement',
+  'engagement-letters': 'Engagement Letters',
+  'questionnaire-v2':   'Questionnaire v2',
+  complianceCheck:      'Compliance Check',
+  notifications:        'Notifications',
+  firms:                'Firms',
+  search:               'Search',
+  taskPortal:           'Task Portal',
+  confidentialLeaders:  'Confidential Leaders',
+  changelog:            'Changelog',
+  featurebase:          'Featurebase',
+  review:               'Review',
+};
+
+function analyzeFeatureDir(baseDir, layer) {
   const results = [];
   let entries;
   try { entries = readdirSync(baseDir, { withFileTypes: true }); } catch { return results; }
@@ -83,40 +135,78 @@ function analyzeDir(baseDir, type) {
     if (!e.isDirectory()) continue;
     const full = join(baseDir, e.name);
     const files = walkFiles(full);
-    const tsFiles = files.filter(f => ['.ts', '.tsx'].includes(extname(f))).length;
-    const exFiles = files.filter(f => ['.ex', '.exs'].includes(extname(f))).length;
-    let lines = 0;
-    for (const f of files) {
-      const ext = extname(f).toLowerCase();
-      if (!LANG_MAP[ext]) continue;
-      try { lines += readFileSync(f, 'utf8').split('\n').length; } catch {}
-    }
-    results.push({ name: e.name, type, files: files.length, tsFiles, exFiles, lines });
+    const codeFiles = files.filter(f => CODE_EXTS.has(extname(f).toLowerCase()));
+    const lines = countLinesInFiles(files);
+    const label = FEATURE_LABELS[e.name] ?? e.name;
+    results.push({
+      key: e.name,
+      label,
+      layer,
+      files: codeFiles.length,
+      lines,
+    });
   }
-  return results;
+  return results.sort((a, b) => b.lines - a.lines);
 }
 
-console.log('📦 Analyzing apps & packages…');
-const apps = analyzeDir(appsDir, 'app');
-const packages = analyzeDir(packagesDir, 'package');
-const modules = [...apps, ...packages].sort((a, b) => b.lines - a.lines);
+const frontendFeatures = analyzeFeatureDir(FRONTEND_FEATURES_DIR, 'frontend');
+
+// ── Backend domain areas ──────────────────────────────────────────────────────
+console.log('⚙️  Analyzing backend domain areas…');
+
+const DOMAIN_LABELS = {
+  tax:        'Tax',
+  cbor:       'CBOR',
+  agentic:    'Agentic',
+  compliance: 'Compliance',
+  teams:      'Teams',
+  databricks: 'Databricks',
+  eval:       'Eval',
+  broadway:   'Broadway',
+  crm:        'CRM',
+  llms:       'LLMs',
+  knuula:     'Knuula',
+  core:       'Core',
+  mappers:    'Mappers',
+  integrations: 'Integrations',
+  fireflies:  'Fireflies',
+  pdf:        'PDF',
+  notes:      'Notes',
+  s3:         'S3',
+  scripts:    'Scripts',
+  services:   'Services',
+  audit:      'Audit',
+  boldsign:   'BoldSign',
+  email:      'Email',
+  sns:        'SNS',
+  auth:       'Auth',
+  repo:       'Repo',
+  notifications: 'Notifications',
+  changelog:  'Changelog',
+  github:     'GitHub',
+  logging:    'Logging',
+  cache:      'Cache',
+};
+
+const backendDomains = analyzeFeatureDir(BACKEND_DOMAINS_DIR, 'backend');
+// Apply label overrides
+for (const d of backendDomains) {
+  d.label = DOMAIN_LABELS[d.key] ?? d.label;
+}
 
 // ── Git stats ─────────────────────────────────────────────────────────────────
 console.log('📜 Reading git history…');
 
-// Commits per day (last 90 days) — use -n 2000 to avoid full-repo scan hanging
+// Commits per day (last 90 days)
 const sinceDate = new Date();
 sinceDate.setDate(sinceDate.getDate() - 90);
 const since = sinceDate.toISOString().split('T')[0];
 
-const logRaw = run(
-  `git log -n 3000 --format="%ad" --date=short --no-merges`,
-);
+const logRaw = run('git log -n 3000 --format="%ad" --date=short --no-merges');
 const commitsByDay = {};
 for (const line of logRaw.split('\n').filter(Boolean)) {
   if (line >= since) commitsByDay[line] = (commitsByDay[line] || 0) + 1;
 }
-// Fill gaps for the 90-day window
 const commitTimeline = [];
 const cursor = new Date(since);
 const today = new Date();
@@ -126,37 +216,44 @@ while (cursor <= today) {
   cursor.setDate(cursor.getDate() + 1);
 }
 
-// Top contributors from last 1000 commits (no merges) — avoids full-repo scan timeout
-const contribRaw = run('git log --format="%an" --no-merges -1000');
-const contribMap = {};
-for (const name of contribRaw.split('\n').filter(Boolean)) {
-  contribMap[name] = (contribMap[name] || 0) + 1;
-}
-const contributors = Object.entries(contribMap)
-  .sort((a, b) => b[1] - a[1])
-  .slice(0, 15)
-  .map(([name, commits]) => ({ name, commits }));
-
-// Total commits (last 180 days to keep it fast; fallback to full if quick)
+// Total commits
 const totalCommits = parseInt(run('git rev-list --count HEAD --no-merges') || '0', 10);
 
-// Most changed files (last 500 commits, no merges)
-const changedRaw = run(
-  `git log -500 --name-only --format="" --no-merges`,
-);
+// Most changed files (last 500 commits) — enriched with feature area
+const changedRaw = run('git log -500 --name-only --format="" --no-merges');
 const fileCounts = {};
 for (const line of changedRaw.split('\n').filter(Boolean)) {
   fileCounts[line] = (fileCounts[line] || 0) + 1;
 }
+
+function resolveFeatureArea(filePath) {
+  // Frontend feature
+  const fmatch = filePath.match(/apps\/frontend\/src\/features\/([^/]+)/);
+  if (fmatch) {
+    const key = fmatch[1];
+    return FEATURE_LABELS[key] ?? key;
+  }
+  // Backend domain
+  const bmatch = filePath.match(/apps\/backend\/lib\/workspacex\/([^/]+)/);
+  if (bmatch) {
+    const key = bmatch[1];
+    return DOMAIN_LABELS[key] ?? key;
+  }
+  return null;
+}
+
 const hotFiles = Object.entries(fileCounts)
   .sort((a, b) => b[1] - a[1])
   .slice(0, 20)
-  .map(([file, changes]) => ({ file: basename(file), path: file, changes }));
+  .map(([file, changes]) => ({
+    file: basename(file),
+    path: file,
+    changes,
+    area: resolveFeatureArea(file),
+  }));
 
 // Recent commits
-const recentRaw = run(
-  'git log --format="%H|%s|%an|%ad" --date=short --no-merges -30',
-);
+const recentRaw = run('git log --format="%H|%s|%an|%ad" --date=short --no-merges -30');
 const recentCommits = recentRaw
   .split('\n')
   .filter(Boolean)
@@ -184,6 +281,9 @@ const languageStats = Object.entries(langCounts)
   .slice(0, 12);
 
 // ── Summary ───────────────────────────────────────────────────────────────────
+const totalFeatureLines = frontendFeatures.reduce((s, f) => s + f.lines, 0);
+const totalDomainLines  = backendDomains.reduce((s, d) => s + d.lines, 0);
+
 const analytics = {
   generatedAt: new Date().toISOString(),
   workspace: WORKSPACE,
@@ -191,18 +291,20 @@ const analytics = {
     totalFiles: allFiles.length,
     totalLines,
     totalCommits,
-    topLanguage: languageStats[0]?.lang || 'Unknown',
-    contributors: contributors.length || 0,
-    apps: apps.length,
-    packages: packages.length,
+    frontendFeatures: frontendFeatures.length,
+    backendDomains: backendDomains.length,
   },
   languageStats,
-  modules,
+  frontendFeatures,
+  backendDomains,
   commitTimeline,
-  contributors,
   hotFiles,
   recentCommits,
   commitsByDow,
+  totals: {
+    frontendLines: totalFeatureLines,
+    backendLines: totalDomainLines,
+  },
 };
 
 if (!existsSync('./public/data')) mkdirSync('./public/data', { recursive: true });
@@ -211,3 +313,5 @@ console.log(`✅ Analytics written to ${OUT}`);
 console.log(`   Files: ${analytics.summary.totalFiles.toLocaleString()}`);
 console.log(`   Lines: ${analytics.summary.totalLines.toLocaleString()}`);
 console.log(`   Commits: ${analytics.summary.totalCommits.toLocaleString()}`);
+console.log(`   Frontend features: ${frontendFeatures.length}`);
+console.log(`   Backend domains: ${backendDomains.length}`);

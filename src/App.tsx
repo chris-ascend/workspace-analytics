@@ -2,11 +2,10 @@ import { useAnalytics } from './hooks/useAnalytics'
 import { StatCard } from './components/StatCard'
 import { CommitTimeline } from './components/CommitTimeline'
 import { LanguageChart } from './components/LanguageChart'
-import { ModuleBreakdown } from './components/ModuleBreakdown'
+import { FeatureAreaChart } from './components/FeatureAreaChart'
 import { HotFiles } from './components/HotFiles'
 import { RecentCommits } from './components/RecentCommits'
 import { DowChart } from './components/DowChart'
-import { Contributors } from './components/Contributors'
 
 function fmtNum(n: number) {
   if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(2)}M`
@@ -38,18 +37,19 @@ function LinesIcon() {
   )
 }
 
-function UsersIcon() {
+function MonitorIcon() {
   return (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+      <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
     </svg>
   )
 }
 
-function LayersIcon() {
+function ServerIcon() {
   return (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/>
+      <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
+      <line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/>
     </svg>
   )
 }
@@ -85,13 +85,19 @@ export default function App() {
         <div className="text-center max-w-sm">
           <p className="text-red-400 text-sm font-medium mb-2">Failed to load analytics data</p>
           <p className="text-gray-500 text-xs">{error ?? 'data/analytics.json not found'}</p>
-          <p className="text-gray-600 text-xs mt-4">Run <code className="text-blue-400">npm run generate</code> to generate data.</p>
+          <p className="text-gray-600 text-xs mt-4">
+            Run <code className="text-blue-400">npm run generate</code> to generate data.
+          </p>
         </div>
       </div>
     )
   }
 
-  const { summary, languageStats, modules, commitTimeline, contributors, hotFiles, recentCommits, commitsByDow } = data
+  const {
+    summary, totals, languageStats,
+    frontendFeatures, backendDomains,
+    commitTimeline, hotFiles, recentCommits, commitsByDow,
+  } = data
 
   const generatedDate = new Date(data.generatedAt).toLocaleDateString('en-US', {
     month: 'long', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit',
@@ -139,39 +145,59 @@ export default function App() {
             accent="text-green-400"
           />
           <StatCard
-            label="Contributors"
-            value={summary.contributors || contributors.length || '—'}
-            icon={<UsersIcon />}
-            accent="text-yellow-400"
+            label="Frontend Features"
+            value={summary.frontendFeatures}
+            sub={`${fmtNum(totals.frontendLines)} lines`}
+            icon={<MonitorIcon />}
+            accent="text-blue-400"
           />
           <StatCard
-            label="Apps & Packages"
-            value={summary.apps + summary.packages}
-            sub={`${summary.apps} apps · ${summary.packages} pkgs`}
-            icon={<LayersIcon />}
+            label="Backend Domains"
+            value={summary.backendDomains}
+            sub={`${fmtNum(totals.backendLines)} lines`}
+            icon={<ServerIcon />}
             accent="text-purple-400"
           />
         </div>
 
-        {/* Commit timeline - full width */}
+        {/* Commit timeline */}
         <CommitTimeline data={commitTimeline} />
 
-        {/* Language + Modules */}
+        {/* Feature areas — hero section */}
+        <div>
+          <h2 className="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-4">
+            Feature Areas
+          </h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <FeatureAreaChart
+              data={frontendFeatures}
+              title="Frontend Features"
+              sub="apps/frontend/src/features — sorted by lines of code"
+              accentColor="bg-blue-500"
+              accentText="text-blue-400"
+              badgeClass="bg-blue-500/10 text-blue-400 border border-blue-500/20"
+            />
+            <FeatureAreaChart
+              data={backendDomains}
+              title="Backend Domains"
+              sub="apps/backend/lib/workspacex — sorted by lines of code"
+              accentColor="bg-purple-500"
+              accentText="text-purple-400"
+              badgeClass="bg-purple-500/10 text-purple-400 border border-purple-500/20"
+            />
+          </div>
+        </div>
+
+        {/* Language + Hot files */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <LanguageChart data={languageStats} />
-          <ModuleBreakdown data={modules} />
-        </div>
-
-        {/* Hot files + DoW */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <HotFiles data={hotFiles} />
-          <DowChart data={commitsByDow} />
         </div>
 
-        {/* Contributors + Recent commits */}
+        {/* DoW + Recent commits */}
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
           <div className="lg:col-span-2">
-            <Contributors data={contributors} />
+            <DowChart data={commitsByDow} />
           </div>
           <div className="lg:col-span-3">
             <RecentCommits data={recentCommits} />

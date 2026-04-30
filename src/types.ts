@@ -4,12 +4,11 @@ export interface LanguageStat {
   lines: number
 }
 
-export interface Module {
-  name: string
-  type: 'app' | 'package'
+export interface FeatureArea {
+  key: string
+  label: string
+  layer: 'frontend' | 'backend'
   files: number
-  tsFiles: number
-  exFiles: number
   lines: number
 }
 
@@ -18,15 +17,11 @@ export interface CommitDay {
   commits: number
 }
 
-export interface Contributor {
-  name: string
-  commits: number
-}
-
 export interface HotFile {
   file: string
   path: string
   changes: number
+  area: string | null
 }
 
 export interface RecentCommit {
@@ -48,15 +43,17 @@ export interface Analytics {
     totalFiles: number
     totalLines: number
     totalCommits: number
-    topLanguage: string
-    contributors: number
-    apps: number
-    packages: number
+    frontendFeatures: number
+    backendDomains: number
+  }
+  totals: {
+    frontendLines: number
+    backendLines: number
   }
   languageStats: LanguageStat[]
-  modules: Module[]
+  frontendFeatures: FeatureArea[]
+  backendDomains: FeatureArea[]
   commitTimeline: CommitDay[]
-  contributors: Contributor[]
   hotFiles: HotFile[]
   recentCommits: RecentCommit[]
   commitsByDow: DowStat[]
