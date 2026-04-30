@@ -10,15 +10,14 @@ interface Props {
 
 function delta(curr: number, prev: number) {
   if (!prev) return null
-  const pct = Math.round(((curr - prev) / prev) * 100)
-  return pct
+  return Math.round(((curr - prev) / prev) * 100)
 }
 
 export function InvestmentDonut({ data, commitsLast30, commitsPrev30 }: Props) {
   const d = delta(commitsLast30, commitsPrev30)
 
   return (
-    <div className="bg-gray-900 border border-gray-800 rounded-xl p-5 flex flex-col">
+    <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm flex flex-col">
       <SectionHeader
         title="Investment Allocation"
         sub="Share of commits last 30 days by product area"
@@ -26,15 +25,15 @@ export function InvestmentDonut({ data, commitsLast30, commitsPrev30 }: Props) {
 
       <div className="flex flex-col gap-4 flex-1">
         {/* Velocity pulse */}
-        <div className="flex items-center gap-3 bg-gray-800/50 rounded-lg px-4 py-3">
+        <div className="flex items-center gap-3 bg-ascend-bg rounded-lg px-4 py-3 border border-gray-200">
           <div>
-            <p className="text-2xl font-bold text-white">{commitsLast30.toLocaleString()}</p>
-            <p className="text-xs text-gray-500">commits last 30d</p>
+            <p className="text-2xl font-bold text-ascend-navy">{commitsLast30.toLocaleString()}</p>
+            <p className="text-xs text-ascend-muted">commits last 30d</p>
           </div>
           {d !== null && (
-            <div className={`ml-auto text-sm font-semibold ${d >= 0 ? 'text-green-400' : 'text-red-400'}`}>
+            <div className={`ml-auto text-sm font-semibold ${d >= 0 ? 'text-emerald-600' : 'text-red-500'}`}>
               {d >= 0 ? '▲' : '▼'} {Math.abs(d)}%
-              <p className="text-xs font-normal text-gray-500">vs prev 30d</p>
+              <p className="text-xs font-normal text-gray-400">vs prev 30d</p>
             </div>
           )}
         </div>
@@ -59,16 +58,17 @@ export function InvestmentDonut({ data, commitsLast30, commitsPrev30 }: Props) {
                 ))}
               </Pie>
               <Tooltip
-                contentStyle={{ background: '#111827', border: '1px solid #374151', borderRadius: 8 }}
+                contentStyle={{ background: '#fff', border: '1px solid #e5e7eb', borderRadius: 8 }}
                 formatter={(v, name) => [`${v} commits`, name]}
-                itemStyle={{ color: '#d1d5db', fontSize: 12 }}
+                itemStyle={{ color: '#102556', fontSize: 12 }}
               />
               <Legend
                 iconType="circle"
                 iconSize={8}
                 formatter={(value, entry) => (
-                  <span style={{ color: '#9ca3af', fontSize: 12 }}>
-                    {value} <span style={{ color: entry.color, fontWeight: 600 }}>
+                  <span style={{ color: '#4a5464', fontSize: 12 }}>
+                    {value}{' '}
+                    <span style={{ color: entry.color, fontWeight: 700 }}>
                       {(entry.payload as InvestmentBucket).pct}%
                     </span>
                   </span>

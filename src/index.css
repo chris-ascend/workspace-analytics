@@ -4,18 +4,20 @@
 
 @layer base {
   :root {
-    color-scheme: dark;
+    color-scheme: light;
   }
 
   body {
-    @apply bg-gray-950 text-gray-100 antialiased;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #f6f7f2;
+    color: #102556;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'articulat-cf', 'Inter', system-ui, -apple-system, sans-serif;
   }
 }
 
 @layer utilities {
   .scrollbar-thin {
     scrollbar-width: thin;
-    scrollbar-color: rgb(55 65 81) transparent;
+    scrollbar-color: rgb(209 213 219) transparent;
   }
 }

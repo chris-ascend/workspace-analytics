@@ -9,9 +9,9 @@ interface Props {
 }
 
 const COLORS = [
-  '#3b82f6', '#8b5cf6', '#06b6d4', '#10b981',
-  '#f59e0b', '#ef4444', '#ec4899', '#14b8a6',
-  '#a855f7', '#f97316', '#84cc16', '#6366f1',
+  '#102556', '#2a60bc', '#61caf9', '#89ffc7',
+  '#a7dce8', '#4a5464', '#0ea5e9', '#38bdf8',
+  '#7dd3fc', '#bae6fd', '#0284c7', '#0369a1',
 ]
 
 function fmtLines(n: number) {
@@ -21,22 +21,20 @@ function fmtLines(n: number) {
 }
 
 export function LanguageChart({ data }: Props) {
-  const chartData = data.map(d => ({ ...d, displayLines: d.lines }))
-
   return (
-    <div className="bg-gray-900 border border-gray-800 rounded-xl p-5">
+    <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
       <SectionHeader title="Lines of Code by Language" sub="Source files only" />
       <div className="h-64">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
-            data={chartData}
+            data={data}
             layout="vertical"
             margin={{ top: 0, right: 12, bottom: 0, left: 90 }}
           >
-            <CartesianGrid strokeDasharray="3 3" stroke="#1f2937" horizontal={false} />
+            <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" horizontal={false} />
             <XAxis
               type="number"
-              tick={{ fill: '#6b7280', fontSize: 11 }}
+              tick={{ fill: '#9ca3af', fontSize: 11 }}
               axisLine={false}
               tickLine={false}
               tickFormatter={fmtLines}
@@ -44,22 +42,22 @@ export function LanguageChart({ data }: Props) {
             <YAxis
               type="category"
               dataKey="lang"
-              tick={{ fill: '#d1d5db', fontSize: 12 }}
+              tick={{ fill: '#102556', fontSize: 12 }}
               axisLine={false}
               tickLine={false}
               width={88}
             />
             <Tooltip
-              contentStyle={{ background: '#111827', border: '1px solid #374151', borderRadius: 8 }}
-              labelStyle={{ color: '#9ca3af', fontSize: 12 }}
-              cursor={{ fill: 'rgba(255,255,255,0.03)' }}
+              contentStyle={{ background: '#fff', border: '1px solid #e5e7eb', borderRadius: 8 }}
+              labelStyle={{ color: '#4a5464', fontSize: 12 }}
+              cursor={{ fill: 'rgba(0,0,0,0.03)' }}
               formatter={(v, _name, props) => [
                 `${Number(v).toLocaleString()} lines (${props.payload.files} files)`,
                 props.payload.lang,
               ]}
             />
-            <Bar dataKey="displayLines" radius={[0, 4, 4, 0]}>
-              {chartData.map((_, i) => (
+            <Bar dataKey="lines" radius={[0, 4, 4, 0]}>
+              {data.map((_, i) => (
                 <Cell key={i} fill={COLORS[i % COLORS.length]} />
               ))}
             </Bar>

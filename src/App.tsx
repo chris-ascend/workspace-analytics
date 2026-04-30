@@ -37,15 +37,15 @@ function ActivityIcon() {
   return <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
 }
 function RefreshIcon() {
-  return <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+  return <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
 }
 
 function LoadingSpinner() {
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-950">
+    <div className="flex items-center justify-center h-screen bg-ascend-bg">
       <div className="text-center">
-        <div className="w-10 h-10 border-2 border-blue-500 border-t-transparent rounded-full animate-spin mx-auto mb-4" />
-        <p className="text-gray-400 text-sm">Loading analytics…</p>
+        <div className="w-10 h-10 border-2 border-ascend-sky border-t-transparent rounded-full animate-spin mx-auto mb-4" />
+        <p className="text-ascend-muted text-sm">Loading analytics…</p>
       </div>
     </div>
   )
@@ -53,7 +53,7 @@ function LoadingSpinner() {
 
 function SectionLabel({ children }: { children: string }) {
   return (
-    <h2 className="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-4">
+    <h2 className="text-[11px] font-bold text-ascend-blue uppercase tracking-widest mb-4">
       {children}
     </h2>
   )
@@ -66,11 +66,11 @@ export default function App() {
 
   if (error || !data) {
     return (
-      <div className="flex items-center justify-center h-screen bg-gray-950">
+      <div className="flex items-center justify-center h-screen bg-ascend-bg">
         <div className="text-center max-w-sm">
-          <p className="text-red-400 text-sm font-medium mb-2">Failed to load analytics data</p>
+          <p className="text-red-500 text-sm font-medium mb-2">Failed to load analytics data</p>
           <p className="text-gray-500 text-xs">{error ?? 'data/analytics.json not found'}</p>
-          <p className="text-gray-600 text-xs mt-4">Run <code className="text-blue-400">npm run generate</code> to generate data.</p>
+          <p className="text-gray-400 text-xs mt-4">Run <code className="text-ascend-blue">npm run generate</code> to generate data.</p>
         </div>
       </div>
     )
@@ -90,20 +90,30 @@ export default function App() {
   })
 
   return (
-    <div className="min-h-screen bg-gray-950">
-      {/* Header */}
-      <header className="border-b border-gray-800 bg-gray-950/80 backdrop-blur sticky top-0 z-10">
+    <div className="min-h-screen bg-ascend-bg">
+
+      {/* Header — Ascend navy with mint gradient accent */}
+      <header className="bg-ascend-navy border-b border-ascend-blue/30 sticky top-0 z-10 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-          <div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
-              <h1 className="text-base font-bold text-white tracking-tight">workspace-analytics</h1>
+          <div className="flex items-center gap-3">
+            {/* Gradient dot accent */}
+            <div
+              className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0"
+              style={{ background: 'linear-gradient(135deg, #61caf9, #89ffc7)' }}
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#102556" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/>
+                <path d="M13 6h3a2 2 0 0 1 2 2v7"/><path d="M11 18H8a2 2 0 0 1-2-2V9"/>
+              </svg>
             </div>
-            <p className="text-xs text-gray-500 mt-0.5">{data.workspace}</p>
+            <div>
+              <h1 className="text-sm font-bold text-white tracking-tight">workspace-analytics</h1>
+              <p className="text-[11px] text-ascend-sky/70 mt-0.5 truncate max-w-xs">{data.workspace}</p>
+            </div>
           </div>
-          <div className="flex items-center gap-2 text-xs text-gray-500">
+          <div className="flex items-center gap-1.5 text-xs text-white/40">
             <RefreshIcon />
-            <span>Generated {generatedDate}</span>
+            <span>{generatedDate}</span>
           </div>
         </div>
       </header>
@@ -119,33 +129,33 @@ export default function App() {
               ? `${velocityDelta >= 0 ? '▲' : '▼'} ${Math.abs(velocityDelta)}% vs prev 30d`
               : undefined}
             icon={<ZapIcon />}
-            accent={velocityDelta !== null && velocityDelta < 0 ? 'text-red-400' : 'text-green-400'}
+            accent={velocityDelta !== null && velocityDelta < 0 ? 'text-red-500' : 'text-emerald-600'}
           />
           <StatCard
             label="Active Areas"
             value={summary.activeAreas}
             sub={`of ${summary.frontendFeatures + summary.backendDomains} total`}
             icon={<ActivityIcon />}
-            accent="text-yellow-400"
+            accent="text-amber-500"
           />
           <StatCard
             label="Total Commits"
             value={fmtNum(summary.totalCommits)}
             icon={<GitIcon />}
-            accent="text-blue-400"
+            accent="text-ascend-blue"
           />
           <StatCard
             label="Lines of Code"
             value={fmtNum(summary.totalLines)}
             sub={`FE ${fmtNum(totals.frontendLines)} · BE ${fmtNum(totals.backendLines)}`}
             icon={<LinesIcon />}
-            accent="text-cyan-400"
+            accent="text-ascend-sky"
           />
           <StatCard
             label="Total Files"
             value={fmtNum(summary.totalFiles)}
             icon={<FileIcon />}
-            accent="text-purple-400"
+            accent="text-ascend-navy"
           />
         </div>
 
@@ -157,7 +167,7 @@ export default function App() {
 
         {/* ── Investment Allocation + Velocity Heatmap ── */}
         <section>
-          <SectionLabel>Investment & Velocity</SectionLabel>
+          <SectionLabel>Investment &amp; Velocity</SectionLabel>
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
             <div className="lg:col-span-2">
               <InvestmentDonut
@@ -176,7 +186,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* ── Feature Areas (by codebase size) ── */}
+        {/* ── Codebase Size ── */}
         <section>
           <SectionLabel>Codebase Size by Feature Area</SectionLabel>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -184,17 +194,17 @@ export default function App() {
               data={frontendByLOC}
               title="Frontend Features"
               sub="apps/frontend/src/features — sorted by lines of code"
-              accentColor="bg-blue-500"
-              accentText="text-blue-400"
-              badgeClass="bg-blue-500/10 text-blue-400 border border-blue-500/20"
+              accentColor="bg-ascend-sky"
+              accentText="text-ascend-sky"
+              badgeClass="bg-ascend-sky/10 text-ascend-blue border-ascend-sky/30"
             />
             <FeatureAreaChart
               data={backendByLOC}
               title="Backend Domains"
               sub="apps/backend/lib/workspacex — sorted by lines of code"
-              accentColor="bg-purple-500"
-              accentText="text-purple-400"
-              badgeClass="bg-purple-500/10 text-purple-400 border border-purple-500/20"
+              accentColor="bg-ascend-blue"
+              accentText="text-ascend-blue"
+              badgeClass="bg-ascend-blue/10 text-ascend-navy border-ascend-blue/30"
             />
           </div>
         </section>
@@ -224,11 +234,18 @@ export default function App() {
 
       </main>
 
-      <footer className="border-t border-gray-800 mt-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 text-center">
-          <p className="text-xs text-gray-600">
-            workspace-analytics · regenerate with <code className="text-gray-500">npm run generate</code>
+      {/* Footer */}
+      <footer className="border-t border-gray-200 mt-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 flex items-center justify-between">
+          <p className="text-xs text-gray-400">
+            workspace-analytics · regenerate with <code className="text-ascend-blue">npm run generate</code>
           </p>
+          <div
+            className="text-xs font-semibold px-3 py-1 rounded-full"
+            style={{ background: 'linear-gradient(to right, #61caf9, #89ffc7)', color: '#102556' }}
+          >
+            Ascend
+          </div>
         </div>
       </footer>
     </div>

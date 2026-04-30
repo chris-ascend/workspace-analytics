@@ -4,13 +4,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        brand: {
-          50: '#eff6ff',
-          100: '#dbeafe',
-          500: '#3b82f6',
-          600: '#2563eb',
-          700: '#1d4ed8',
-          900: '#1e3a8a',
+        ascend: {
+          navy:   '#102556',
+          blue:   '#2a60bc',
+          sky:    '#61caf9',
+          mint:   '#89ffc7',
+          card:   '#a7dce8',
+          bg:     '#f6f7f2',
+          muted:  '#4a5464',
         },
       },
     },
