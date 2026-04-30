@@ -8,6 +8,10 @@ import { CommitTimeline } from './components/CommitTimeline'
 import { LanguageChart } from './components/LanguageChart'
 import { HotFiles } from './components/HotFiles'
 import { RecentCommits } from './components/RecentCommits'
+import { ShippingMomentum } from './components/ShippingMomentum'
+import { FocusRatio } from './components/FocusRatio'
+import { TopBets } from './components/TopBets'
+import { InvestmentTrend } from './components/InvestmentTrend'
 
 
 function fmtNum(n: number) {
@@ -119,6 +123,37 @@ export default function App() {
       </header>
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 py-8 space-y-10">
+
+        {/* ── Executive Summary ── */}
+        <section>
+          <div className="flex items-center gap-2 mb-4">
+            <h2 className="text-[11px] font-bold text-ascend-blue uppercase tracking-widest">Executive Summary</h2>
+            <div className="h-px flex-1 bg-ascend-sky/30" />
+            <span className="text-[10px] text-gray-400 font-medium px-2 py-0.5 bg-ascend-sky/10 rounded-full border border-ascend-sky/20">CEO View</span>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+            <ShippingMomentum
+              data={commitTimeline}
+              commitsLast30={summary.commitsLast30}
+              commitsPrev30={summary.commitsPrev30}
+            />
+            <TopBets
+              investmentAllocation={investmentAllocation}
+              frontendFeatures={frontendFeatures}
+              backendDomains={backendDomains}
+            />
+            <FocusRatio
+              frontendFeatures={frontendFeatures}
+              backendDomains={backendDomains}
+            />
+          </div>
+          <InvestmentTrend
+            frontendFeatures={frontendFeatures}
+            backendDomains={backendDomains}
+            investmentAllocation={investmentAllocation}
+            weekLabels={weekLabels}
+          />
+        </section>
 
         {/* ── Stat cards ── */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">

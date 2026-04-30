@@ -9,6 +9,7 @@ export interface FeatureArea {
   key: string
   label: string
   layer: 'frontend' | 'backend'
+  bucket?: string           // product investment bucket name
   files: number
   lines: number
   recentCommits: number

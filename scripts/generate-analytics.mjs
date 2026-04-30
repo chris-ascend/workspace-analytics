@@ -320,6 +320,16 @@ const whereWeAreBuilding = allAreas
 const commitsLast30 = allAreas.reduce((s, a) => s + a.recentCommits, 0);
 const commitsPrev30 = allAreas.reduce((s, a) => s + (a.prevCommits ?? 0), 0);
 
+// ── Assign bucket to each area ───────────────────────────────────────────────
+const areaBucketMap = new Map(); // "layer:key" → bucket name
+for (const [bucket, { frontend, backend }] of Object.entries(PRODUCT_BUCKETS)) {
+  for (const key of frontend) areaBucketMap.set(`frontend:${key}`, bucket);
+  for (const key of backend)  areaBucketMap.set(`backend:${key}`, bucket);
+}
+for (const a of allAreasList) {
+  a.bucket = areaBucketMap.get(`${a.layer}:${a.key}`) ?? 'Platform / Infra';
+}
+
 // ── Investment allocation (by product bucket) ─────────────────────────────────
 const bucketCommits = {};
 for (const [bucket, { color, frontend, backend }] of Object.entries(PRODUCT_BUCKETS)) {

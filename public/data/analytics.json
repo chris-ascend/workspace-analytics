@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-30T15:25:03.149Z",
+  "generatedAt": "2026-04-30T20:22:40.788Z",
   "workspace": "/Users/chrisragobeer/development/dev/workspace",
   "summary": {
     "totalFiles": 9515,
@@ -192,7 +192,8 @@
         18,
         23
       ],
-      "activityState": "active"
+      "activityState": "active",
+      "bucket": "Tax Workflows"
     },
     {
       "key": "agent",
@@ -215,7 +216,8 @@
         20,
         15
       ],
-      "activityState": "active"
+      "activityState": "active",
+      "bucket": "AI / Agent"
     },
     {
       "key": "vision",
@@ -238,7 +240,8 @@
         4,
         11
       ],
-      "activityState": "active"
+      "activityState": "active",
+      "bucket": "CRM"
     },
     {
       "key": "prepareTaxWorksheets",
@@ -261,7 +264,8 @@
         0,
         2
       ],
-      "activityState": "active"
+      "activityState": "active",
+      "bucket": "Tax Workflows"
     },
     {
       "key": "taxDelivery",
@@ -284,7 +288,8 @@
         2,
         10
       ],
-      "activityState": "active"
+      "activityState": "active",
+      "bucket": "Tax Workflows"
     },
     {
       "key": "pbc",
@@ -307,7 +312,8 @@
         2,
         3
       ],
-      "activityState": "active"
+      "activityState": "active",
+      "bucket": "Tax Workflows"
     },
     {
       "key": "projects",
@@ -330,7 +336,8 @@
         3,
         6
       ],
-      "activityState": "active"
+      "activityState": "active",
+      "bucket": "Projects"
     },
     {
       "key": "clientPortal",
@@ -353,7 +360,8 @@
         0,
         6
       ],
-      "activityState": "active"
+      "activityState": "active",
+      "bucket": "Client Tools"
     },
     {
       "key": "notifications",
@@ -376,7 +384,8 @@
         0,
         0
       ],
-      "activityState": "active"
+      "activityState": "active",
+      "bucket": "Client Tools"
     },
     {
       "key": "dataReview",
@@ -399,7 +408,8 @@
         1,
         2
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Tax Workflows"
     },
     {
       "key": "bor",
@@ -422,7 +432,8 @@
         1,
         1
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Tax Workflows"
     },
     {
       "key": "dataCleaning",
@@ -445,7 +456,8 @@
         1,
         4
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Tax Workflows"
     },
     {
       "key": "clientDetails",
@@ -468,7 +480,8 @@
         0,
         1
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "CRM"
     },
     {
       "key": "clientGroup",
@@ -491,7 +504,8 @@
         0,
         2
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "CRM"
     },
     {
       "key": "re-engagement",
@@ -514,7 +528,8 @@
         0,
         1
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Client Tools"
     },
     {
       "key": "commandPalette",
@@ -537,7 +552,8 @@
         0,
         0
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "taskPortal",
@@ -560,7 +576,8 @@
         0,
         1
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Client Tools"
     },
     {
       "key": "review",
@@ -583,7 +600,8 @@
         1,
         1
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Client Tools"
     },
     {
       "key": "questionnaire",
@@ -606,7 +624,8 @@
         0,
         0
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Tax Workflows"
     },
     {
       "key": "questionnaire-v2",
@@ -629,7 +648,8 @@
         0,
         0
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Tax Workflows"
     },
     {
       "key": "k1Matching",
@@ -652,7 +672,8 @@
         0,
         0
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Tax Workflows"
     },
     {
       "key": "clientList",
@@ -675,7 +696,8 @@
         0,
         0
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "CRM"
     },
     {
       "key": "firms",
@@ -698,7 +720,8 @@
         0,
         0
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "taxAdvisory",
@@ -721,7 +744,8 @@
         0,
         0
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Tax Workflows"
     },
     {
       "key": "search",
@@ -744,7 +768,8 @@
         0,
         0
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "complianceCheck",
@@ -767,7 +792,8 @@
         0,
         1
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Tax Workflows"
     },
     {
       "key": "changelog",
@@ -790,7 +816,8 @@
         0,
         0
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "confidentialLeaders",
@@ -813,7 +840,8 @@
         0,
         0
       ],
-      "activityState": "dormant"
+      "activityState": "dormant",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "engagement-letters",
@@ -836,7 +864,8 @@
         0,
         0
       ],
-      "activityState": "dormant"
+      "activityState": "dormant",
+      "bucket": "Tax Workflows"
     },
     {
       "key": "featurebase",
@@ -859,7 +888,8 @@
         0,
         0
       ],
-      "activityState": "dormant"
+      "activityState": "dormant",
+      "bucket": "Client Tools"
     }
   ],
   "backendDomains": [
@@ -884,7 +914,8 @@
         12,
         25
       ],
-      "activityState": "active"
+      "activityState": "active",
+      "bucket": "Tax Workflows"
     },
     {
       "key": "cbor",
@@ -907,7 +938,8 @@
         5,
         10
       ],
-      "activityState": "active"
+      "activityState": "active",
+      "bucket": "Tax Workflows"
     },
     {
       "key": "agentic",
@@ -930,7 +962,8 @@
         17,
         8
       ],
-      "activityState": "active"
+      "activityState": "active",
+      "bucket": "AI / Agent"
     },
     {
       "key": "broadway",
@@ -953,7 +986,8 @@
         1,
         4
       ],
-      "activityState": "active"
+      "activityState": "active",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "crm",
@@ -976,7 +1010,8 @@
         3,
         2
       ],
-      "activityState": "active"
+      "activityState": "active",
+      "bucket": "CRM"
     },
     {
       "key": "pdf",
@@ -999,7 +1034,8 @@
         1,
         0
       ],
-      "activityState": "active"
+      "activityState": "active",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "llms",
@@ -1022,7 +1058,8 @@
         1,
         0
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "AI / Agent"
     },
     {
       "key": "core",
@@ -1045,7 +1082,8 @@
         1,
         1
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "s3",
@@ -1068,7 +1106,8 @@
         1,
         1
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "notifications",
@@ -1091,7 +1130,8 @@
         0,
         0
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "knuula",
@@ -1114,7 +1154,8 @@
         0,
         0
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Client Tools"
     },
     {
       "key": "integrations",
@@ -1137,7 +1178,8 @@
         0,
         0
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "compliance",
@@ -1160,7 +1202,8 @@
         1,
         2
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Tax Workflows"
     },
     {
       "key": "mappers",
@@ -1183,7 +1226,8 @@
         0,
         3
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "fireflies",
@@ -1206,7 +1250,8 @@
         2,
         1
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Client Tools"
     },
     {
       "key": "teams",
@@ -1229,7 +1274,8 @@
         0,
         1
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "eval",
@@ -1252,7 +1298,8 @@
         0,
         0
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "AI / Agent"
     },
     {
       "key": "email_verification",
@@ -1275,7 +1322,8 @@
         0,
         1
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "databricks",
@@ -1298,7 +1346,8 @@
         1,
         0
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "AI / Agent"
     },
     {
       "key": "boldsign",
@@ -1321,7 +1370,8 @@
         0,
         1
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Client Tools"
     },
     {
       "key": "sns",
@@ -1344,7 +1394,8 @@
         0,
         1
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "cache",
@@ -1367,7 +1418,8 @@
         0,
         1
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "logging",
@@ -1390,7 +1442,8 @@
         0,
         1
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "user_preferences",
@@ -1413,7 +1466,8 @@
         0,
         1
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "vault",
@@ -1436,7 +1490,8 @@
         0,
         0
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "notes",
@@ -1459,7 +1514,8 @@
         0,
         0
       ],
-      "activityState": "dormant"
+      "activityState": "dormant",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "scripts",
@@ -1482,7 +1538,8 @@
         0,
         0
       ],
-      "activityState": "dormant"
+      "activityState": "dormant",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "services",
@@ -1505,7 +1562,8 @@
         0,
         0
       ],
-      "activityState": "dormant"
+      "activityState": "dormant",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "audit",
@@ -1528,7 +1586,8 @@
         0,
         0
       ],
-      "activityState": "dormant"
+      "activityState": "dormant",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "email",
@@ -1551,7 +1610,8 @@
         0,
         0
       ],
-      "activityState": "dormant"
+      "activityState": "dormant",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "auth",
@@ -1574,7 +1634,8 @@
         0,
         0
       ],
-      "activityState": "dormant"
+      "activityState": "dormant",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "changelog",
@@ -1597,7 +1658,8 @@
         0,
         0
       ],
-      "activityState": "dormant"
+      "activityState": "dormant",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "repo",
@@ -1620,7 +1682,8 @@
         0,
         0
       ],
-      "activityState": "dormant"
+      "activityState": "dormant",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "github",
@@ -1643,7 +1706,8 @@
         0,
         0
       ],
-      "activityState": "dormant"
+      "activityState": "dormant",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "ecto_types",
@@ -1666,7 +1730,8 @@
         0,
         0
       ],
-      "activityState": "dormant"
+      "activityState": "dormant",
+      "bucket": "Platform / Infra"
     }
   ],
   "frontendByLOC": [
@@ -1691,7 +1756,8 @@
         0,
         2
       ],
-      "activityState": "active"
+      "activityState": "active",
+      "bucket": "Tax Workflows"
     },
     {
       "key": "pbc",
@@ -1714,7 +1780,8 @@
         2,
         3
       ],
-      "activityState": "active"
+      "activityState": "active",
+      "bucket": "Tax Workflows"
     },
     {
       "key": "vision",
@@ -1737,7 +1804,8 @@
         4,
         11
       ],
-      "activityState": "active"
+      "activityState": "active",
+      "bucket": "CRM"
     },
     {
       "key": "entityTax",
@@ -1760,7 +1828,8 @@
         18,
         23
       ],
-      "activityState": "active"
+      "activityState": "active",
+      "bucket": "Tax Workflows"
     },
     {
       "key": "questionnaire",
@@ -1783,7 +1852,8 @@
         0,
         0
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Tax Workflows"
     },
     {
       "key": "dataReview",
@@ -1806,7 +1876,8 @@
         1,
         2
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Tax Workflows"
     },
     {
       "key": "agent",
@@ -1829,7 +1900,8 @@
         20,
         15
       ],
-      "activityState": "active"
+      "activityState": "active",
+      "bucket": "AI / Agent"
     },
     {
       "key": "projects",
@@ -1852,7 +1924,8 @@
         3,
         6
       ],
-      "activityState": "active"
+      "activityState": "active",
+      "bucket": "Projects"
     },
     {
       "key": "clientPortal",
@@ -1875,7 +1948,8 @@
         0,
         6
       ],
-      "activityState": "active"
+      "activityState": "active",
+      "bucket": "Client Tools"
     },
     {
       "key": "bor",
@@ -1898,7 +1972,8 @@
         1,
         1
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Tax Workflows"
     },
     {
       "key": "clientDetails",
@@ -1921,7 +1996,8 @@
         0,
         1
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "CRM"
     },
     {
       "key": "re-engagement",
@@ -1944,7 +2020,8 @@
         0,
         1
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Client Tools"
     },
     {
       "key": "clientGroup",
@@ -1967,7 +2044,8 @@
         0,
         2
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "CRM"
     },
     {
       "key": "dataCleaning",
@@ -1990,7 +2068,8 @@
         1,
         4
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Tax Workflows"
     },
     {
       "key": "taxDelivery",
@@ -2013,7 +2092,8 @@
         2,
         10
       ],
-      "activityState": "active"
+      "activityState": "active",
+      "bucket": "Tax Workflows"
     },
     {
       "key": "commandPalette",
@@ -2036,7 +2116,8 @@
         0,
         0
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "questionnaire-v2",
@@ -2059,7 +2140,8 @@
         0,
         0
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Tax Workflows"
     },
     {
       "key": "k1Matching",
@@ -2082,7 +2164,8 @@
         0,
         0
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Tax Workflows"
     },
     {
       "key": "clientList",
@@ -2105,7 +2188,8 @@
         0,
         0
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "CRM"
     },
     {
       "key": "firms",
@@ -2128,7 +2212,8 @@
         0,
         0
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "taxAdvisory",
@@ -2151,7 +2236,8 @@
         0,
         0
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Tax Workflows"
     },
     {
       "key": "search",
@@ -2174,7 +2260,8 @@
         0,
         0
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "complianceCheck",
@@ -2197,7 +2284,8 @@
         0,
         1
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Tax Workflows"
     },
     {
       "key": "notifications",
@@ -2220,7 +2308,8 @@
         0,
         0
       ],
-      "activityState": "active"
+      "activityState": "active",
+      "bucket": "Client Tools"
     },
     {
       "key": "taskPortal",
@@ -2243,7 +2332,8 @@
         0,
         1
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Client Tools"
     },
     {
       "key": "confidentialLeaders",
@@ -2266,7 +2356,8 @@
         0,
         0
       ],
-      "activityState": "dormant"
+      "activityState": "dormant",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "review",
@@ -2289,7 +2380,8 @@
         1,
         1
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Client Tools"
     },
     {
       "key": "changelog",
@@ -2312,7 +2404,8 @@
         0,
         0
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "engagement-letters",
@@ -2335,7 +2428,8 @@
         0,
         0
       ],
-      "activityState": "dormant"
+      "activityState": "dormant",
+      "bucket": "Tax Workflows"
     },
     {
       "key": "featurebase",
@@ -2358,7 +2452,8 @@
         0,
         0
       ],
-      "activityState": "dormant"
+      "activityState": "dormant",
+      "bucket": "Client Tools"
     }
   ],
   "backendByLOC": [
@@ -2383,7 +2478,8 @@
         12,
         25
       ],
-      "activityState": "active"
+      "activityState": "active",
+      "bucket": "Tax Workflows"
     },
     {
       "key": "cbor",
@@ -2406,7 +2502,8 @@
         5,
         10
       ],
-      "activityState": "active"
+      "activityState": "active",
+      "bucket": "Tax Workflows"
     },
     {
       "key": "agentic",
@@ -2429,7 +2526,8 @@
         17,
         8
       ],
-      "activityState": "active"
+      "activityState": "active",
+      "bucket": "AI / Agent"
     },
     {
       "key": "compliance",
@@ -2452,7 +2550,8 @@
         1,
         2
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Tax Workflows"
     },
     {
       "key": "teams",
@@ -2475,7 +2574,8 @@
         0,
         1
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "databricks",
@@ -2498,7 +2598,8 @@
         1,
         0
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "AI / Agent"
     },
     {
       "key": "eval",
@@ -2521,7 +2622,8 @@
         0,
         0
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "AI / Agent"
     },
     {
       "key": "broadway",
@@ -2544,7 +2646,8 @@
         1,
         4
       ],
-      "activityState": "active"
+      "activityState": "active",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "crm",
@@ -2567,7 +2670,8 @@
         3,
         2
       ],
-      "activityState": "active"
+      "activityState": "active",
+      "bucket": "CRM"
     },
     {
       "key": "llms",
@@ -2590,7 +2694,8 @@
         1,
         0
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "AI / Agent"
     },
     {
       "key": "knuula",
@@ -2613,7 +2718,8 @@
         0,
         0
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Client Tools"
     },
     {
       "key": "core",
@@ -2636,7 +2742,8 @@
         1,
         1
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "mappers",
@@ -2659,7 +2766,8 @@
         0,
         3
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "integrations",
@@ -2682,7 +2790,8 @@
         0,
         0
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "fireflies",
@@ -2705,7 +2814,8 @@
         2,
         1
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Client Tools"
     },
     {
       "key": "pdf",
@@ -2728,7 +2838,8 @@
         1,
         0
       ],
-      "activityState": "active"
+      "activityState": "active",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "notes",
@@ -2751,7 +2862,8 @@
         0,
         0
       ],
-      "activityState": "dormant"
+      "activityState": "dormant",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "s3",
@@ -2774,7 +2886,8 @@
         1,
         1
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "scripts",
@@ -2797,7 +2910,8 @@
         0,
         0
       ],
-      "activityState": "dormant"
+      "activityState": "dormant",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "services",
@@ -2820,7 +2934,8 @@
         0,
         0
       ],
-      "activityState": "dormant"
+      "activityState": "dormant",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "audit",
@@ -2843,7 +2958,8 @@
         0,
         0
       ],
-      "activityState": "dormant"
+      "activityState": "dormant",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "boldsign",
@@ -2866,7 +2982,8 @@
         0,
         1
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Client Tools"
     },
     {
       "key": "email",
@@ -2889,7 +3006,8 @@
         0,
         0
       ],
-      "activityState": "dormant"
+      "activityState": "dormant",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "sns",
@@ -2912,7 +3030,8 @@
         0,
         1
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "auth",
@@ -2935,7 +3054,8 @@
         0,
         0
       ],
-      "activityState": "dormant"
+      "activityState": "dormant",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "email_verification",
@@ -2958,7 +3078,8 @@
         0,
         1
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "changelog",
@@ -2981,7 +3102,8 @@
         0,
         0
       ],
-      "activityState": "dormant"
+      "activityState": "dormant",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "notifications",
@@ -3004,7 +3126,8 @@
         0,
         0
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "cache",
@@ -3027,7 +3150,8 @@
         0,
         1
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "repo",
@@ -3050,7 +3174,8 @@
         0,
         0
       ],
-      "activityState": "dormant"
+      "activityState": "dormant",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "logging",
@@ -3073,7 +3198,8 @@
         0,
         1
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "github",
@@ -3096,7 +3222,8 @@
         0,
         0
       ],
-      "activityState": "dormant"
+      "activityState": "dormant",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "user_preferences",
@@ -3119,7 +3246,8 @@
         0,
         1
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "vault",
@@ -3142,7 +3270,8 @@
         0,
         0
       ],
-      "activityState": "maintenance"
+      "activityState": "maintenance",
+      "bucket": "Platform / Infra"
     },
     {
       "key": "ecto_types",
@@ -3165,7 +3294,8 @@
         0,
         0
       ],
-      "activityState": "dormant"
+      "activityState": "dormant",
+      "bucket": "Platform / Infra"
     }
   ],
   "languageStats": [
