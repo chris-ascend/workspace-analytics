@@ -2,6 +2,7 @@ export interface LanguageStat {
   lang: string
   files: number
   lines: number
+  meaningful: boolean
 }
 
 export interface FeatureArea {
@@ -59,6 +60,7 @@ export interface Analytics {
   summary: {
     totalFiles: number
     totalLines: number
+    meaningfulLines: number
     totalCommits: number
     frontendFeatures: number
     backendDomains: number

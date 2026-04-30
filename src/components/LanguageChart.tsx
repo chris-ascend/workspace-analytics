@@ -8,10 +8,9 @@ interface Props {
   data: LanguageStat[]
 }
 
-const COLORS = [
+const MEANINGFUL_COLORS = [
   '#102556', '#2a60bc', '#61caf9', '#89ffc7',
-  '#a7dce8', '#4a5464', '#0ea5e9', '#38bdf8',
-  '#7dd3fc', '#bae6fd', '#0284c7', '#0369a1',
+  '#a7dce8', '#0369a1', '#0ea5e9', '#38bdf8',
 ]
 
 function fmtLines(n: number) {
@@ -20,16 +19,58 @@ function fmtLines(n: number) {
   return String(n)
 }
 
+interface TooltipPayload {
+  payload: LanguageStat & { displayLines: number }
+}
+
+function CustomTooltip({ active, payload, label }: {
+  active?: boolean
+  payload?: TooltipPayload[]
+  label?: string
+}) {
+  if (!active || !payload?.length) return null
+  const d = payload[0].payload
+  return (
+    <div className="bg-white border border-gray-200 rounded-lg shadow-sm px-3 py-2 text-xs">
+      <p className="font-semibold text-ascend-navy">{label}</p>
+      <p className="text-ascend-muted">{d.lines.toLocaleString()} lines · {d.files} files</p>
+      {!d.meaningful && (
+        <p className="text-gray-400 mt-0.5 italic">Config / scripts</p>
+      )}
+    </div>
+  )
+}
+
 export function LanguageChart({ data }: Props) {
+  const meaningful = data.filter(d => d.meaningful).slice(0, 8)
+  const noise = data.filter(d => !d.meaningful)
+
+  // Collapsed noise bar — single "Config & Scripts" entry
+  const noiseTotalLines = noise.reduce((s, d) => s + d.lines, 0)
+  const noiseTotalFiles = noise.reduce((s, d) => s + d.files, 0)
+  const noiseEntry: LanguageStat & { displayLines: number } = {
+    lang: 'Config & Scripts',
+    files: noiseTotalFiles,
+    lines: noiseTotalLines,
+    meaningful: false,
+    displayLines: noiseTotalLines,
+  }
+
+  const chartData = [
+    ...meaningful.map(d => ({ ...d, displayLines: d.lines })),
+    noiseEntry,
+  ]
+
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
-      <SectionHeader title="Lines of Code by Language" sub="Source files only" />
+      <SectionHeader title="Lines of Code by Language" sub="Source code only — config &amp; scripts grouped separately" />
+
       <div className="h-64">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
-            data={data}
+            data={chartData}
             layout="vertical"
-            margin={{ top: 0, right: 12, bottom: 0, left: 90 }}
+            margin={{ top: 0, right: 12, bottom: 0, left: 110 }}
           >
             <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" horizontal={false} />
             <XAxis
@@ -42,27 +83,48 @@ export function LanguageChart({ data }: Props) {
             <YAxis
               type="category"
               dataKey="lang"
-              tick={{ fill: '#102556', fontSize: 12 }}
+              tick={({ x, y, payload, index }: { x: number; y: number; payload: { value: string }; index: number }) => {
+                const isNoise = index === chartData.length - 1
+                return (
+                  <text
+                    x={x}
+                    y={y}
+                    textAnchor="end"
+                    dominantBaseline="central"
+                    fill={isNoise ? '#9ca3af' : '#102556'}
+                    fontSize={isNoise ? 11 : 12}
+                    fontStyle={isNoise ? 'italic' : 'normal'}
+                  >
+                    {payload.value}
+                  </text>
+                )
+              }}
               axisLine={false}
               tickLine={false}
-              width={88}
+              width={108}
             />
-            <Tooltip
-              contentStyle={{ background: '#fff', border: '1px solid #e5e7eb', borderRadius: 8 }}
-              labelStyle={{ color: '#4a5464', fontSize: 12 }}
-              cursor={{ fill: 'rgba(0,0,0,0.03)' }}
-              formatter={(v, _name, props) => [
-                `${Number(v).toLocaleString()} lines (${props.payload.files} files)`,
-                props.payload.lang,
-              ]}
-            />
-            <Bar dataKey="lines" radius={[0, 4, 4, 0]}>
-              {data.map((_, i) => (
-                <Cell key={i} fill={COLORS[i % COLORS.length]} />
+            <Tooltip content={<CustomTooltip />} />
+            <Bar dataKey="displayLines" radius={[0, 4, 4, 0]}>
+              {chartData.map((entry, i) => (
+                <Cell
+                  key={entry.lang}
+                  fill={entry.meaningful
+                    ? MEANINGFUL_COLORS[i % MEANINGFUL_COLORS.length]
+                    : '#e5e7eb'
+                  }
+                />
               ))}
             </Bar>
           </BarChart>
         </ResponsiveContainer>
+      </div>
+
+      {/* Noise breakdown tooltip */}
+      <div className="mt-3 ml-[116px]">
+        <p className="text-[10px] text-gray-400 italic">
+          Config &amp; Scripts includes:{' '}
+          {noise.map(d => `${d.lang} (${fmtLines(d.lines)})`).join(' · ')}
+        </p>
       </div>
     </div>
   )

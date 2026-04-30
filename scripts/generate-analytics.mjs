@@ -34,6 +34,18 @@ const LANG_MAP = {
   '.py': 'Python', '.rb': 'Ruby',
 };
 
+// Meaningful = production logic. Everything else = config / scripts / assets.
+const MEANINGFUL_LANGS = new Set([
+  'TypeScript', 'TypeScript (JSX)',
+  'JavaScript', 'JavaScript (JSX)',
+  'Elixir',           // .ex only — modules, not scripts
+  'HEEx',             // Elixir HTML templates
+  'CSS', 'SCSS',
+  'SQL',
+  'GraphQL',
+  'Python', 'Ruby',
+]);
+
 const CODE_EXTS = new Set([
   '.ts', '.tsx', '.js', '.jsx',
   '.ex', '.exs', '.heex', '.eex',
@@ -390,11 +402,19 @@ const commitsByDow = Object.entries(dowCounts).map(([d, count]) => ({
   commits: count,
 }));
 
-// Language stats
+// Language stats — split into meaningful source vs config/scripts
 const languageStats = Object.entries(langCounts)
-  .map(([lang, files]) => ({ lang, files, lines: langLines[lang] || 0 }))
-  .sort((a, b) => b.lines - a.lines)
-  .slice(0, 12);
+  .map(([lang, files]) => ({
+    lang,
+    files,
+    lines: langLines[lang] || 0,
+    meaningful: MEANINGFUL_LANGS.has(lang),
+  }))
+  .sort((a, b) => b.lines - a.lines);
+
+const meaningfulLines = languageStats
+  .filter(l => l.meaningful)
+  .reduce((s, l) => s + l.lines, 0);
 
 // Active area count
 const activeAreas = allAreas.filter(a => a.activityState === 'active').length;
@@ -413,6 +433,7 @@ const analytics = {
   summary: {
     totalFiles: allFiles.length,
     totalLines,
+    meaningfulLines,
     totalCommits,
     frontendFeatures: frontendFeatures.length,
     backendDomains: backendDomains.length,

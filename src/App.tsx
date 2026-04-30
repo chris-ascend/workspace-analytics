@@ -8,7 +8,7 @@ import { CommitTimeline } from './components/CommitTimeline'
 import { LanguageChart } from './components/LanguageChart'
 import { HotFiles } from './components/HotFiles'
 import { RecentCommits } from './components/RecentCommits'
-import { DowChart } from './components/DowChart'
+
 
 function fmtNum(n: number) {
   if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(2)}M`
@@ -80,7 +80,7 @@ export default function App() {
     summary, totals, weekLabels,
     whereWeAreBuilding, investmentAllocation,
     frontendFeatures, backendDomains, frontendByLOC, backendByLOC,
-    languageStats, commitTimeline, hotFiles, recentCommits, commitsByDow,
+    languageStats, commitTimeline, hotFiles, recentCommits,
   } = data
 
   const velocityDelta = delta(summary.commitsLast30, summary.commitsPrev30)
@@ -145,9 +145,9 @@ export default function App() {
             accent="text-ascend-blue"
           />
           <StatCard
-            label="Lines of Code"
-            value={fmtNum(summary.totalLines)}
-            sub={`FE ${fmtNum(totals.frontendLines)} · BE ${fmtNum(totals.backendLines)}`}
+            label="Source Lines"
+            value={fmtNum(summary.meaningfulLines)}
+            sub={`${fmtNum(summary.totalLines)} total incl. config`}
             icon={<LinesIcon />}
             accent="text-ascend-sky"
           />
@@ -225,9 +225,8 @@ export default function App() {
             <div className="lg:col-span-3">
               <CommitTimeline data={commitTimeline} />
             </div>
-            <div className="lg:col-span-2 space-y-6">
+            <div className="lg:col-span-2">
               <LanguageChart data={languageStats} />
-              <DowChart data={commitsByDow} />
             </div>
           </div>
         </section>
