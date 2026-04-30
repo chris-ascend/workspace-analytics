@@ -1,0 +1,3969 @@
+{
+  "generatedAt": "2026-04-30T15:25:03.149Z",
+  "workspace": "/Users/chrisragobeer/development/dev/workspace",
+  "summary": {
+    "totalFiles": 9515,
+    "totalLines": 3703308,
+    "meaningfulLines": 1267886,
+    "totalCommits": 7009,
+    "frontendFeatures": 30,
+    "backendDomains": 35,
+    "activeAreas": 15,
+    "commitsLast30": 675,
+    "commitsPrev30": 679
+  },
+  "totals": {
+    "frontendLines": 535158,
+    "backendLines": 247833
+  },
+  "weekLabels": [
+    "Feb 5",
+    "Feb 12",
+    "Feb 19",
+    "Feb 26",
+    "Mar 5",
+    "Mar 12",
+    "Mar 19",
+    "Mar 26",
+    "Apr 2",
+    "Apr 9",
+    "Apr 16",
+    "Apr 23"
+  ],
+  "whereWeAreBuilding": [
+    {
+      "label": "Tax",
+      "layer": "backend",
+      "recentCommits": 128
+    },
+    {
+      "label": "Entity Tax",
+      "layer": "frontend",
+      "recentCommits": 67
+    },
+    {
+      "label": "Agent",
+      "layer": "frontend",
+      "recentCommits": 63
+    },
+    {
+      "label": "CBOR",
+      "layer": "backend",
+      "recentCommits": 61
+    },
+    {
+      "label": "Vision (CRM)",
+      "layer": "frontend",
+      "recentCommits": 60
+    },
+    {
+      "label": "Agentic",
+      "layer": "backend",
+      "recentCommits": 41
+    },
+    {
+      "label": "Prepare Tax Worksheets",
+      "layer": "frontend",
+      "recentCommits": 35
+    },
+    {
+      "label": "Tax Delivery",
+      "layer": "frontend",
+      "recentCommits": 34
+    },
+    {
+      "label": "PBC",
+      "layer": "frontend",
+      "recentCommits": 23
+    },
+    {
+      "label": "Projects",
+      "layer": "frontend",
+      "recentCommits": 13
+    },
+    {
+      "label": "Client Portal",
+      "layer": "frontend",
+      "recentCommits": 13
+    },
+    {
+      "label": "Broadway",
+      "layer": "backend",
+      "recentCommits": 13
+    },
+    {
+      "label": "Notifications",
+      "layer": "frontend",
+      "recentCommits": 12
+    },
+    {
+      "label": "CRM",
+      "layer": "backend",
+      "recentCommits": 11
+    },
+    {
+      "label": "PDF",
+      "layer": "backend",
+      "recentCommits": 8
+    },
+    {
+      "label": "Data Review",
+      "layer": "frontend",
+      "recentCommits": 7
+    },
+    {
+      "label": "BOR",
+      "layer": "frontend",
+      "recentCommits": 7
+    },
+    {
+      "label": "LLMs",
+      "layer": "backend",
+      "recentCommits": 6
+    },
+    {
+      "label": "Data Cleaning",
+      "layer": "frontend",
+      "recentCommits": 5
+    },
+    {
+      "label": "Core",
+      "layer": "backend",
+      "recentCommits": 5
+    }
+  ],
+  "investmentAllocation": [
+    {
+      "bucket": "Tax Workflows",
+      "commits": 375,
+      "color": "#3b82f6",
+      "pct": 56
+    },
+    {
+      "bucket": "AI / Agent",
+      "commits": 113,
+      "color": "#8b5cf6",
+      "pct": 17
+    },
+    {
+      "bucket": "CRM",
+      "commits": 78,
+      "color": "#06b6d4",
+      "pct": 12
+    },
+    {
+      "bucket": "Platform / Infra",
+      "commits": 50,
+      "color": "#6b7280",
+      "pct": 7
+    },
+    {
+      "bucket": "Client Tools",
+      "commits": 39,
+      "color": "#10b981",
+      "pct": 6
+    },
+    {
+      "bucket": "Projects",
+      "commits": 13,
+      "color": "#f59e0b",
+      "pct": 2
+    }
+  ],
+  "frontendFeatures": [
+    {
+      "key": "entityTax",
+      "label": "Entity Tax",
+      "layer": "frontend",
+      "files": 284,
+      "lines": 48769,
+      "recentCommits": 67,
+      "weeklyCommits": [
+        20,
+        6,
+        4,
+        23,
+        11,
+        4,
+        12,
+        5,
+        3,
+        19,
+        18,
+        23
+      ],
+      "activityState": "active"
+    },
+    {
+      "key": "agent",
+      "label": "Agent",
+      "layer": "frontend",
+      "files": 109,
+      "lines": 19064,
+      "recentCommits": 63,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        25,
+        20,
+        15
+      ],
+      "activityState": "active"
+    },
+    {
+      "key": "vision",
+      "label": "Vision (CRM)",
+      "layer": "frontend",
+      "files": 287,
+      "lines": 50258,
+      "recentCommits": 60,
+      "weeklyCommits": [
+        2,
+        2,
+        8,
+        6,
+        7,
+        13,
+        12,
+        12,
+        14,
+        25,
+        4,
+        11
+      ],
+      "activityState": "active"
+    },
+    {
+      "key": "prepareTaxWorksheets",
+      "label": "Prepare Tax Worksheets",
+      "layer": "frontend",
+      "files": 1189,
+      "lines": 167859,
+      "recentCommits": 35,
+      "weeklyCommits": [
+        19,
+        19,
+        10,
+        15,
+        10,
+        24,
+        20,
+        17,
+        13,
+        10,
+        0,
+        2
+      ],
+      "activityState": "active"
+    },
+    {
+      "key": "taxDelivery",
+      "label": "Tax Delivery",
+      "layer": "frontend",
+      "files": 45,
+      "lines": 6110,
+      "recentCommits": 34,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        1,
+        13,
+        8,
+        2,
+        10
+      ],
+      "activityState": "active"
+    },
+    {
+      "key": "pbc",
+      "label": "PBC",
+      "layer": "frontend",
+      "files": 327,
+      "lines": 69583,
+      "recentCommits": 23,
+      "weeklyCommits": [
+        21,
+        24,
+        10,
+        18,
+        36,
+        31,
+        40,
+        30,
+        6,
+        5,
+        2,
+        3
+      ],
+      "activityState": "active"
+    },
+    {
+      "key": "projects",
+      "label": "Projects",
+      "layer": "frontend",
+      "files": 50,
+      "lines": 16465,
+      "recentCommits": 13,
+      "weeklyCommits": [
+        11,
+        1,
+        3,
+        2,
+        6,
+        1,
+        7,
+        2,
+        2,
+        1,
+        3,
+        6
+      ],
+      "activityState": "active"
+    },
+    {
+      "key": "clientPortal",
+      "label": "Client Portal",
+      "layer": "frontend",
+      "files": 45,
+      "lines": 11689,
+      "recentCommits": 13,
+      "weeklyCommits": [
+        14,
+        7,
+        2,
+        3,
+        2,
+        0,
+        0,
+        1,
+        2,
+        4,
+        0,
+        6
+      ],
+      "activityState": "active"
+    },
+    {
+      "key": "notifications",
+      "label": "Notifications",
+      "layer": "frontend",
+      "files": 8,
+      "lines": 939,
+      "recentCommits": 12,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        7,
+        3,
+        0,
+        0
+      ],
+      "activityState": "active"
+    },
+    {
+      "key": "dataReview",
+      "label": "Data Review",
+      "layer": "frontend",
+      "files": 133,
+      "lines": 34576,
+      "recentCommits": 7,
+      "weeklyCommits": [
+        5,
+        2,
+        4,
+        0,
+        2,
+        0,
+        2,
+        1,
+        1,
+        3,
+        1,
+        2
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "bor",
+      "label": "BOR",
+      "layer": "frontend",
+      "files": 33,
+      "lines": 9989,
+      "recentCommits": 7,
+      "weeklyCommits": [
+        7,
+        2,
+        3,
+        2,
+        2,
+        3,
+        0,
+        0,
+        0,
+        5,
+        1,
+        1
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "dataCleaning",
+      "label": "Data Cleaning",
+      "layer": "frontend",
+      "files": 34,
+      "lines": 6242,
+      "recentCommits": 5,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        4
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "clientDetails",
+      "label": "Client Details",
+      "layer": "frontend",
+      "files": 39,
+      "lines": 8824,
+      "recentCommits": 3,
+      "weeklyCommits": [
+        11,
+        3,
+        2,
+        0,
+        5,
+        3,
+        4,
+        2,
+        0,
+        2,
+        0,
+        1
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "clientGroup",
+      "label": "Client Group",
+      "layer": "frontend",
+      "files": 34,
+      "lines": 6420,
+      "recentCommits": 3,
+      "weeklyCommits": [
+        5,
+        1,
+        1,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        1,
+        0,
+        2
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "re-engagement",
+      "label": "Re-engagement",
+      "layer": "frontend",
+      "files": 43,
+      "lines": 8121,
+      "recentCommits": 2,
+      "weeklyCommits": [
+        6,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "commandPalette",
+      "label": "Command Palette",
+      "layer": "frontend",
+      "files": 27,
+      "lines": 6067,
+      "recentCommits": 2,
+      "weeklyCommits": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "taskPortal",
+      "label": "Task Portal",
+      "layer": "frontend",
+      "files": 5,
+      "lines": 865,
+      "recentCommits": 2,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "review",
+      "label": "Review",
+      "layer": "frontend",
+      "files": 3,
+      "lines": 451,
+      "recentCommits": 2,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "questionnaire",
+      "label": "Questionnaire",
+      "layer": "frontend",
+      "files": 596,
+      "lines": 44166,
+      "recentCommits": 1,
+      "weeklyCommits": [
+        2,
+        1,
+        3,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "questionnaire-v2",
+      "label": "Questionnaire v2",
+      "layer": "frontend",
+      "files": 21,
+      "lines": 5124,
+      "recentCommits": 1,
+      "weeklyCommits": [
+        3,
+        0,
+        1,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "k1Matching",
+      "label": "K-1 Matching",
+      "layer": "frontend",
+      "files": 25,
+      "lines": 3099,
+      "recentCommits": 1,
+      "weeklyCommits": [
+        5,
+        2,
+        1,
+        0,
+        2,
+        0,
+        2,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "clientList",
+      "label": "Client List",
+      "layer": "frontend",
+      "files": 9,
+      "lines": 2836,
+      "recentCommits": 1,
+      "weeklyCommits": [
+        4,
+        2,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "firms",
+      "label": "Firms",
+      "layer": "frontend",
+      "files": 13,
+      "lines": 1918,
+      "recentCommits": 1,
+      "weeklyCommits": [
+        3,
+        0,
+        1,
+        2,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "taxAdvisory",
+      "label": "Tax Advisory",
+      "layer": "frontend",
+      "files": 14,
+      "lines": 1659,
+      "recentCommits": 1,
+      "weeklyCommits": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "search",
+      "label": "Search",
+      "layer": "frontend",
+      "files": 5,
+      "lines": 1209,
+      "recentCommits": 1,
+      "weeklyCommits": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "complianceCheck",
+      "label": "Compliance Check",
+      "layer": "frontend",
+      "files": 5,
+      "lines": 1173,
+      "recentCommits": 1,
+      "weeklyCommits": [
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "changelog",
+      "label": "Changelog",
+      "layer": "frontend",
+      "files": 2,
+      "lines": 437,
+      "recentCommits": 1,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "confidentialLeaders",
+      "label": "Confidential Leaders",
+      "layer": "frontend",
+      "files": 5,
+      "lines": 852,
+      "recentCommits": 0,
+      "weeklyCommits": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "activityState": "dormant"
+    },
+    {
+      "key": "engagement-letters",
+      "label": "Engagement Letters",
+      "layer": "frontend",
+      "files": 1,
+      "lines": 229,
+      "recentCommits": 0,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "activityState": "dormant"
+    },
+    {
+      "key": "featurebase",
+      "label": "Featurebase",
+      "layer": "frontend",
+      "files": 7,
+      "lines": 165,
+      "recentCommits": 0,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "activityState": "dormant"
+    }
+  ],
+  "backendDomains": [
+    {
+      "key": "tax",
+      "label": "Tax",
+      "layer": "backend",
+      "files": 232,
+      "lines": 105390,
+      "recentCommits": 128,
+      "weeklyCommits": [
+        28,
+        25,
+        20,
+        18,
+        27,
+        22,
+        30,
+        34,
+        36,
+        38,
+        12,
+        25
+      ],
+      "activityState": "active"
+    },
+    {
+      "key": "cbor",
+      "label": "CBOR",
+      "layer": "backend",
+      "files": 132,
+      "lines": 55098,
+      "recentCommits": 61,
+      "weeklyCommits": [
+        23,
+        20,
+        30,
+        18,
+        34,
+        20,
+        28,
+        10,
+        25,
+        16,
+        5,
+        10
+      ],
+      "activityState": "active"
+    },
+    {
+      "key": "agentic",
+      "label": "Agentic",
+      "layer": "backend",
+      "files": 97,
+      "lines": 28401,
+      "recentCommits": 41,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        11,
+        17,
+        8
+      ],
+      "activityState": "active"
+    },
+    {
+      "key": "broadway",
+      "label": "Broadway",
+      "layer": "backend",
+      "files": 13,
+      "lines": 3994,
+      "recentCommits": 13,
+      "weeklyCommits": [
+        0,
+        4,
+        6,
+        4,
+        8,
+        1,
+        10,
+        4,
+        7,
+        1,
+        1,
+        4
+      ],
+      "activityState": "active"
+    },
+    {
+      "key": "crm",
+      "label": "CRM",
+      "layer": "backend",
+      "files": 17,
+      "lines": 3568,
+      "recentCommits": 11,
+      "weeklyCommits": [
+        1,
+        1,
+        0,
+        4,
+        5,
+        3,
+        5,
+        4,
+        3,
+        1,
+        3,
+        2
+      ],
+      "activityState": "active"
+    },
+    {
+      "key": "pdf",
+      "label": "PDF",
+      "layer": "backend",
+      "files": 3,
+      "lines": 1283,
+      "recentCommits": 8,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        3,
+        4,
+        1,
+        0
+      ],
+      "activityState": "active"
+    },
+    {
+      "key": "llms",
+      "label": "LLMs",
+      "layer": "backend",
+      "files": 14,
+      "lines": 3265,
+      "recentCommits": 6,
+      "weeklyCommits": [
+        0,
+        1,
+        1,
+        6,
+        5,
+        1,
+        1,
+        1,
+        0,
+        4,
+        1,
+        0
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "core",
+      "label": "Core",
+      "layer": "backend",
+      "files": 8,
+      "lines": 2648,
+      "recentCommits": 5,
+      "weeklyCommits": [
+        0,
+        3,
+        0,
+        3,
+        2,
+        1,
+        0,
+        0,
+        0,
+        3,
+        1,
+        1
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "s3",
+      "label": "S3",
+      "layer": "backend",
+      "files": 5,
+      "lines": 807,
+      "recentCommits": 5,
+      "weeklyCommits": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        2,
+        1,
+        1,
+        1
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "notifications",
+      "label": "Notifications",
+      "layer": "backend",
+      "files": 4,
+      "lines": 208,
+      "recentCommits": 5,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        3,
+        0,
+        0,
+        0
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "knuula",
+      "label": "Knuula",
+      "layer": "backend",
+      "files": 11,
+      "lines": 2726,
+      "recentCommits": 4,
+      "weeklyCommits": [
+        1,
+        0,
+        2,
+        0,
+        5,
+        0,
+        0,
+        0,
+        0,
+        4,
+        0,
+        0
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "integrations",
+      "label": "Integrations",
+      "layer": "backend",
+      "files": 5,
+      "lines": 2302,
+      "recentCommits": 4,
+      "weeklyCommits": [
+        2,
+        0,
+        1,
+        1,
+        2,
+        0,
+        0,
+        1,
+        1,
+        3,
+        0,
+        0
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "compliance",
+      "label": "Compliance",
+      "layer": "backend",
+      "files": 15,
+      "lines": 10936,
+      "recentCommits": 3,
+      "weeklyCommits": [
+        7,
+        0,
+        1,
+        2,
+        1,
+        0,
+        0,
+        2,
+        0,
+        0,
+        1,
+        2
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "mappers",
+      "label": "Mappers",
+      "layer": "backend",
+      "files": 11,
+      "lines": 2627,
+      "recentCommits": 3,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        3
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "fireflies",
+      "label": "Fireflies",
+      "layer": "backend",
+      "files": 5,
+      "lines": 1574,
+      "recentCommits": 3,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        2,
+        1
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "teams",
+      "label": "Teams",
+      "layer": "backend",
+      "files": 37,
+      "lines": 7425,
+      "recentCommits": 2,
+      "weeklyCommits": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "eval",
+      "label": "Eval",
+      "layer": "backend",
+      "files": 15,
+      "lines": 4520,
+      "recentCommits": 2,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        3,
+        2,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "email_verification",
+      "label": "Email Verification",
+      "layer": "backend",
+      "files": 2,
+      "lines": 280,
+      "recentCommits": 2,
+      "weeklyCommits": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "databricks",
+      "label": "Databricks",
+      "layer": "backend",
+      "files": 28,
+      "lines": 5161,
+      "recentCommits": 1,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "boldsign",
+      "label": "BoldSign",
+      "layer": "backend",
+      "files": 3,
+      "lines": 487,
+      "recentCommits": 1,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "sns",
+      "label": "SNS",
+      "layer": "backend",
+      "files": 3,
+      "lines": 382,
+      "recentCommits": 1,
+      "weeklyCommits": [
+        1,
+        0,
+        2,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "cache",
+      "label": "Cache",
+      "layer": "backend",
+      "files": 2,
+      "lines": 202,
+      "recentCommits": 1,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "logging",
+      "label": "Logging",
+      "layer": "backend",
+      "files": 1,
+      "lines": 114,
+      "recentCommits": 1,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "user_preferences",
+      "label": "user_preferences",
+      "layer": "backend",
+      "files": 3,
+      "lines": 110,
+      "recentCommits": 1,
+      "weeklyCommits": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "vault",
+      "label": "vault",
+      "layer": "backend",
+      "files": 4,
+      "lines": 68,
+      "recentCommits": 1,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "notes",
+      "label": "Notes",
+      "layer": "backend",
+      "files": 3,
+      "lines": 1111,
+      "recentCommits": 0,
+      "weeklyCommits": [
+        0,
+        1,
+        1,
+        4,
+        3,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "activityState": "dormant"
+    },
+    {
+      "key": "scripts",
+      "label": "Scripts",
+      "layer": "backend",
+      "files": 5,
+      "lines": 659,
+      "recentCommits": 0,
+      "weeklyCommits": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "activityState": "dormant"
+    },
+    {
+      "key": "services",
+      "label": "Services",
+      "layer": "backend",
+      "files": 2,
+      "lines": 607,
+      "recentCommits": 0,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "activityState": "dormant"
+    },
+    {
+      "key": "audit",
+      "label": "Audit",
+      "layer": "backend",
+      "files": 5,
+      "lines": 593,
+      "recentCommits": 0,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "activityState": "dormant"
+    },
+    {
+      "key": "email",
+      "label": "Email",
+      "layer": "backend",
+      "files": 2,
+      "lines": 470,
+      "recentCommits": 0,
+      "weeklyCommits": [
+        1,
+        1,
+        0,
+        3,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "activityState": "dormant"
+    },
+    {
+      "key": "auth",
+      "label": "Auth",
+      "layer": "backend",
+      "files": 4,
+      "lines": 281,
+      "recentCommits": 0,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        3,
+        1,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "activityState": "dormant"
+    },
+    {
+      "key": "changelog",
+      "label": "Changelog",
+      "layer": "backend",
+      "files": 2,
+      "lines": 236,
+      "recentCommits": 0,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "activityState": "dormant"
+    },
+    {
+      "key": "repo",
+      "label": "Repo",
+      "layer": "backend",
+      "files": 1,
+      "lines": 159,
+      "recentCommits": 0,
+      "weeklyCommits": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "activityState": "dormant"
+    },
+    {
+      "key": "github",
+      "label": "GitHub",
+      "layer": "backend",
+      "files": 1,
+      "lines": 114,
+      "recentCommits": 0,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "activityState": "dormant"
+    },
+    {
+      "key": "ecto_types",
+      "label": "Ecto Types",
+      "layer": "backend",
+      "files": 1,
+      "lines": 27,
+      "recentCommits": 0,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "activityState": "dormant"
+    }
+  ],
+  "frontendByLOC": [
+    {
+      "key": "prepareTaxWorksheets",
+      "label": "Prepare Tax Worksheets",
+      "layer": "frontend",
+      "files": 1189,
+      "lines": 167859,
+      "recentCommits": 35,
+      "weeklyCommits": [
+        19,
+        19,
+        10,
+        15,
+        10,
+        24,
+        20,
+        17,
+        13,
+        10,
+        0,
+        2
+      ],
+      "activityState": "active"
+    },
+    {
+      "key": "pbc",
+      "label": "PBC",
+      "layer": "frontend",
+      "files": 327,
+      "lines": 69583,
+      "recentCommits": 23,
+      "weeklyCommits": [
+        21,
+        24,
+        10,
+        18,
+        36,
+        31,
+        40,
+        30,
+        6,
+        5,
+        2,
+        3
+      ],
+      "activityState": "active"
+    },
+    {
+      "key": "vision",
+      "label": "Vision (CRM)",
+      "layer": "frontend",
+      "files": 287,
+      "lines": 50258,
+      "recentCommits": 60,
+      "weeklyCommits": [
+        2,
+        2,
+        8,
+        6,
+        7,
+        13,
+        12,
+        12,
+        14,
+        25,
+        4,
+        11
+      ],
+      "activityState": "active"
+    },
+    {
+      "key": "entityTax",
+      "label": "Entity Tax",
+      "layer": "frontend",
+      "files": 284,
+      "lines": 48769,
+      "recentCommits": 67,
+      "weeklyCommits": [
+        20,
+        6,
+        4,
+        23,
+        11,
+        4,
+        12,
+        5,
+        3,
+        19,
+        18,
+        23
+      ],
+      "activityState": "active"
+    },
+    {
+      "key": "questionnaire",
+      "label": "Questionnaire",
+      "layer": "frontend",
+      "files": 596,
+      "lines": 44166,
+      "recentCommits": 1,
+      "weeklyCommits": [
+        2,
+        1,
+        3,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "dataReview",
+      "label": "Data Review",
+      "layer": "frontend",
+      "files": 133,
+      "lines": 34576,
+      "recentCommits": 7,
+      "weeklyCommits": [
+        5,
+        2,
+        4,
+        0,
+        2,
+        0,
+        2,
+        1,
+        1,
+        3,
+        1,
+        2
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "agent",
+      "label": "Agent",
+      "layer": "frontend",
+      "files": 109,
+      "lines": 19064,
+      "recentCommits": 63,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        25,
+        20,
+        15
+      ],
+      "activityState": "active"
+    },
+    {
+      "key": "projects",
+      "label": "Projects",
+      "layer": "frontend",
+      "files": 50,
+      "lines": 16465,
+      "recentCommits": 13,
+      "weeklyCommits": [
+        11,
+        1,
+        3,
+        2,
+        6,
+        1,
+        7,
+        2,
+        2,
+        1,
+        3,
+        6
+      ],
+      "activityState": "active"
+    },
+    {
+      "key": "clientPortal",
+      "label": "Client Portal",
+      "layer": "frontend",
+      "files": 45,
+      "lines": 11689,
+      "recentCommits": 13,
+      "weeklyCommits": [
+        14,
+        7,
+        2,
+        3,
+        2,
+        0,
+        0,
+        1,
+        2,
+        4,
+        0,
+        6
+      ],
+      "activityState": "active"
+    },
+    {
+      "key": "bor",
+      "label": "BOR",
+      "layer": "frontend",
+      "files": 33,
+      "lines": 9989,
+      "recentCommits": 7,
+      "weeklyCommits": [
+        7,
+        2,
+        3,
+        2,
+        2,
+        3,
+        0,
+        0,
+        0,
+        5,
+        1,
+        1
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "clientDetails",
+      "label": "Client Details",
+      "layer": "frontend",
+      "files": 39,
+      "lines": 8824,
+      "recentCommits": 3,
+      "weeklyCommits": [
+        11,
+        3,
+        2,
+        0,
+        5,
+        3,
+        4,
+        2,
+        0,
+        2,
+        0,
+        1
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "re-engagement",
+      "label": "Re-engagement",
+      "layer": "frontend",
+      "files": 43,
+      "lines": 8121,
+      "recentCommits": 2,
+      "weeklyCommits": [
+        6,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "clientGroup",
+      "label": "Client Group",
+      "layer": "frontend",
+      "files": 34,
+      "lines": 6420,
+      "recentCommits": 3,
+      "weeklyCommits": [
+        5,
+        1,
+        1,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        1,
+        0,
+        2
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "dataCleaning",
+      "label": "Data Cleaning",
+      "layer": "frontend",
+      "files": 34,
+      "lines": 6242,
+      "recentCommits": 5,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        4
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "taxDelivery",
+      "label": "Tax Delivery",
+      "layer": "frontend",
+      "files": 45,
+      "lines": 6110,
+      "recentCommits": 34,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        1,
+        13,
+        8,
+        2,
+        10
+      ],
+      "activityState": "active"
+    },
+    {
+      "key": "commandPalette",
+      "label": "Command Palette",
+      "layer": "frontend",
+      "files": 27,
+      "lines": 6067,
+      "recentCommits": 2,
+      "weeklyCommits": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "questionnaire-v2",
+      "label": "Questionnaire v2",
+      "layer": "frontend",
+      "files": 21,
+      "lines": 5124,
+      "recentCommits": 1,
+      "weeklyCommits": [
+        3,
+        0,
+        1,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "k1Matching",
+      "label": "K-1 Matching",
+      "layer": "frontend",
+      "files": 25,
+      "lines": 3099,
+      "recentCommits": 1,
+      "weeklyCommits": [
+        5,
+        2,
+        1,
+        0,
+        2,
+        0,
+        2,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "clientList",
+      "label": "Client List",
+      "layer": "frontend",
+      "files": 9,
+      "lines": 2836,
+      "recentCommits": 1,
+      "weeklyCommits": [
+        4,
+        2,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "firms",
+      "label": "Firms",
+      "layer": "frontend",
+      "files": 13,
+      "lines": 1918,
+      "recentCommits": 1,
+      "weeklyCommits": [
+        3,
+        0,
+        1,
+        2,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "taxAdvisory",
+      "label": "Tax Advisory",
+      "layer": "frontend",
+      "files": 14,
+      "lines": 1659,
+      "recentCommits": 1,
+      "weeklyCommits": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "search",
+      "label": "Search",
+      "layer": "frontend",
+      "files": 5,
+      "lines": 1209,
+      "recentCommits": 1,
+      "weeklyCommits": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "complianceCheck",
+      "label": "Compliance Check",
+      "layer": "frontend",
+      "files": 5,
+      "lines": 1173,
+      "recentCommits": 1,
+      "weeklyCommits": [
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "notifications",
+      "label": "Notifications",
+      "layer": "frontend",
+      "files": 8,
+      "lines": 939,
+      "recentCommits": 12,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        7,
+        3,
+        0,
+        0
+      ],
+      "activityState": "active"
+    },
+    {
+      "key": "taskPortal",
+      "label": "Task Portal",
+      "layer": "frontend",
+      "files": 5,
+      "lines": 865,
+      "recentCommits": 2,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "confidentialLeaders",
+      "label": "Confidential Leaders",
+      "layer": "frontend",
+      "files": 5,
+      "lines": 852,
+      "recentCommits": 0,
+      "weeklyCommits": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "activityState": "dormant"
+    },
+    {
+      "key": "review",
+      "label": "Review",
+      "layer": "frontend",
+      "files": 3,
+      "lines": 451,
+      "recentCommits": 2,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "changelog",
+      "label": "Changelog",
+      "layer": "frontend",
+      "files": 2,
+      "lines": 437,
+      "recentCommits": 1,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "engagement-letters",
+      "label": "Engagement Letters",
+      "layer": "frontend",
+      "files": 1,
+      "lines": 229,
+      "recentCommits": 0,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "activityState": "dormant"
+    },
+    {
+      "key": "featurebase",
+      "label": "Featurebase",
+      "layer": "frontend",
+      "files": 7,
+      "lines": 165,
+      "recentCommits": 0,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "activityState": "dormant"
+    }
+  ],
+  "backendByLOC": [
+    {
+      "key": "tax",
+      "label": "Tax",
+      "layer": "backend",
+      "files": 232,
+      "lines": 105390,
+      "recentCommits": 128,
+      "weeklyCommits": [
+        28,
+        25,
+        20,
+        18,
+        27,
+        22,
+        30,
+        34,
+        36,
+        38,
+        12,
+        25
+      ],
+      "activityState": "active"
+    },
+    {
+      "key": "cbor",
+      "label": "CBOR",
+      "layer": "backend",
+      "files": 132,
+      "lines": 55098,
+      "recentCommits": 61,
+      "weeklyCommits": [
+        23,
+        20,
+        30,
+        18,
+        34,
+        20,
+        28,
+        10,
+        25,
+        16,
+        5,
+        10
+      ],
+      "activityState": "active"
+    },
+    {
+      "key": "agentic",
+      "label": "Agentic",
+      "layer": "backend",
+      "files": 97,
+      "lines": 28401,
+      "recentCommits": 41,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        11,
+        17,
+        8
+      ],
+      "activityState": "active"
+    },
+    {
+      "key": "compliance",
+      "label": "Compliance",
+      "layer": "backend",
+      "files": 15,
+      "lines": 10936,
+      "recentCommits": 3,
+      "weeklyCommits": [
+        7,
+        0,
+        1,
+        2,
+        1,
+        0,
+        0,
+        2,
+        0,
+        0,
+        1,
+        2
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "teams",
+      "label": "Teams",
+      "layer": "backend",
+      "files": 37,
+      "lines": 7425,
+      "recentCommits": 2,
+      "weeklyCommits": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "databricks",
+      "label": "Databricks",
+      "layer": "backend",
+      "files": 28,
+      "lines": 5161,
+      "recentCommits": 1,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "eval",
+      "label": "Eval",
+      "layer": "backend",
+      "files": 15,
+      "lines": 4520,
+      "recentCommits": 2,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        3,
+        2,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "broadway",
+      "label": "Broadway",
+      "layer": "backend",
+      "files": 13,
+      "lines": 3994,
+      "recentCommits": 13,
+      "weeklyCommits": [
+        0,
+        4,
+        6,
+        4,
+        8,
+        1,
+        10,
+        4,
+        7,
+        1,
+        1,
+        4
+      ],
+      "activityState": "active"
+    },
+    {
+      "key": "crm",
+      "label": "CRM",
+      "layer": "backend",
+      "files": 17,
+      "lines": 3568,
+      "recentCommits": 11,
+      "weeklyCommits": [
+        1,
+        1,
+        0,
+        4,
+        5,
+        3,
+        5,
+        4,
+        3,
+        1,
+        3,
+        2
+      ],
+      "activityState": "active"
+    },
+    {
+      "key": "llms",
+      "label": "LLMs",
+      "layer": "backend",
+      "files": 14,
+      "lines": 3265,
+      "recentCommits": 6,
+      "weeklyCommits": [
+        0,
+        1,
+        1,
+        6,
+        5,
+        1,
+        1,
+        1,
+        0,
+        4,
+        1,
+        0
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "knuula",
+      "label": "Knuula",
+      "layer": "backend",
+      "files": 11,
+      "lines": 2726,
+      "recentCommits": 4,
+      "weeklyCommits": [
+        1,
+        0,
+        2,
+        0,
+        5,
+        0,
+        0,
+        0,
+        0,
+        4,
+        0,
+        0
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "core",
+      "label": "Core",
+      "layer": "backend",
+      "files": 8,
+      "lines": 2648,
+      "recentCommits": 5,
+      "weeklyCommits": [
+        0,
+        3,
+        0,
+        3,
+        2,
+        1,
+        0,
+        0,
+        0,
+        3,
+        1,
+        1
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "mappers",
+      "label": "Mappers",
+      "layer": "backend",
+      "files": 11,
+      "lines": 2627,
+      "recentCommits": 3,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        3
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "integrations",
+      "label": "Integrations",
+      "layer": "backend",
+      "files": 5,
+      "lines": 2302,
+      "recentCommits": 4,
+      "weeklyCommits": [
+        2,
+        0,
+        1,
+        1,
+        2,
+        0,
+        0,
+        1,
+        1,
+        3,
+        0,
+        0
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "fireflies",
+      "label": "Fireflies",
+      "layer": "backend",
+      "files": 5,
+      "lines": 1574,
+      "recentCommits": 3,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        2,
+        1
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "pdf",
+      "label": "PDF",
+      "layer": "backend",
+      "files": 3,
+      "lines": 1283,
+      "recentCommits": 8,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        3,
+        4,
+        1,
+        0
+      ],
+      "activityState": "active"
+    },
+    {
+      "key": "notes",
+      "label": "Notes",
+      "layer": "backend",
+      "files": 3,
+      "lines": 1111,
+      "recentCommits": 0,
+      "weeklyCommits": [
+        0,
+        1,
+        1,
+        4,
+        3,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "activityState": "dormant"
+    },
+    {
+      "key": "s3",
+      "label": "S3",
+      "layer": "backend",
+      "files": 5,
+      "lines": 807,
+      "recentCommits": 5,
+      "weeklyCommits": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        2,
+        1,
+        1,
+        1
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "scripts",
+      "label": "Scripts",
+      "layer": "backend",
+      "files": 5,
+      "lines": 659,
+      "recentCommits": 0,
+      "weeklyCommits": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "activityState": "dormant"
+    },
+    {
+      "key": "services",
+      "label": "Services",
+      "layer": "backend",
+      "files": 2,
+      "lines": 607,
+      "recentCommits": 0,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "activityState": "dormant"
+    },
+    {
+      "key": "audit",
+      "label": "Audit",
+      "layer": "backend",
+      "files": 5,
+      "lines": 593,
+      "recentCommits": 0,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "activityState": "dormant"
+    },
+    {
+      "key": "boldsign",
+      "label": "BoldSign",
+      "layer": "backend",
+      "files": 3,
+      "lines": 487,
+      "recentCommits": 1,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "email",
+      "label": "Email",
+      "layer": "backend",
+      "files": 2,
+      "lines": 470,
+      "recentCommits": 0,
+      "weeklyCommits": [
+        1,
+        1,
+        0,
+        3,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "activityState": "dormant"
+    },
+    {
+      "key": "sns",
+      "label": "SNS",
+      "layer": "backend",
+      "files": 3,
+      "lines": 382,
+      "recentCommits": 1,
+      "weeklyCommits": [
+        1,
+        0,
+        2,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "auth",
+      "label": "Auth",
+      "layer": "backend",
+      "files": 4,
+      "lines": 281,
+      "recentCommits": 0,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        3,
+        1,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "activityState": "dormant"
+    },
+    {
+      "key": "email_verification",
+      "label": "Email Verification",
+      "layer": "backend",
+      "files": 2,
+      "lines": 280,
+      "recentCommits": 2,
+      "weeklyCommits": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "changelog",
+      "label": "Changelog",
+      "layer": "backend",
+      "files": 2,
+      "lines": 236,
+      "recentCommits": 0,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "activityState": "dormant"
+    },
+    {
+      "key": "notifications",
+      "label": "Notifications",
+      "layer": "backend",
+      "files": 4,
+      "lines": 208,
+      "recentCommits": 5,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        3,
+        0,
+        0,
+        0
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "cache",
+      "label": "Cache",
+      "layer": "backend",
+      "files": 2,
+      "lines": 202,
+      "recentCommits": 1,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "repo",
+      "label": "Repo",
+      "layer": "backend",
+      "files": 1,
+      "lines": 159,
+      "recentCommits": 0,
+      "weeklyCommits": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "activityState": "dormant"
+    },
+    {
+      "key": "logging",
+      "label": "Logging",
+      "layer": "backend",
+      "files": 1,
+      "lines": 114,
+      "recentCommits": 1,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "github",
+      "label": "GitHub",
+      "layer": "backend",
+      "files": 1,
+      "lines": 114,
+      "recentCommits": 0,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "activityState": "dormant"
+    },
+    {
+      "key": "user_preferences",
+      "label": "user_preferences",
+      "layer": "backend",
+      "files": 3,
+      "lines": 110,
+      "recentCommits": 1,
+      "weeklyCommits": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "vault",
+      "label": "vault",
+      "layer": "backend",
+      "files": 4,
+      "lines": 68,
+      "recentCommits": 1,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "activityState": "maintenance"
+    },
+    {
+      "key": "ecto_types",
+      "label": "Ecto Types",
+      "layer": "backend",
+      "files": 1,
+      "lines": 27,
+      "recentCommits": 0,
+      "weeklyCommits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "activityState": "dormant"
+    }
+  ],
+  "languageStats": [
+    {
+      "lang": "JSON",
+      "files": 317,
+      "lines": 1464868,
+      "meaningful": false
+    },
+    {
+      "lang": "Elixir Script",
+      "files": 1809,
+      "lines": 652664,
+      "meaningful": false
+    },
+    {
+      "lang": "Elixir",
+      "files": 1222,
+      "lines": 422182,
+      "meaningful": true
+    },
+    {
+      "lang": "TypeScript",
+      "files": 2841,
+      "lines": 387464,
+      "meaningful": true
+    },
+    {
+      "lang": "TypeScript (JSX)",
+      "files": 1573,
+      "lines": 349615,
+      "meaningful": true
+    },
+    {
+      "lang": "Markdown",
+      "files": 986,
+      "lines": 289798,
+      "meaningful": false
+    },
+    {
+      "lang": "JavaScript",
+      "files": 10,
+      "lines": 83858,
+      "meaningful": true
+    },
+    {
+      "lang": "YAML",
+      "files": 142,
+      "lines": 26672,
+      "meaningful": false
+    },
+    {
+      "lang": "Python",
+      "files": 24,
+      "lines": 13732,
+      "meaningful": true
+    },
+    {
+      "lang": "SQL",
+      "files": 13,
+      "lines": 9060,
+      "meaningful": true
+    },
+    {
+      "lang": "HEEx",
+      "files": 9,
+      "lines": 1426,
+      "meaningful": true
+    },
+    {
+      "lang": "Shell",
+      "files": 13,
+      "lines": 1302,
+      "meaningful": false
+    },
+    {
+      "lang": "CSS",
+      "files": 3,
+      "lines": 549,
+      "meaningful": true
+    },
+    {
+      "lang": "SVG",
+      "files": 10,
+      "lines": 88,
+      "meaningful": false
+    },
+    {
+      "lang": "EEx",
+      "files": 1,
+      "lines": 16,
+      "meaningful": false
+    },
+    {
+      "lang": "HTML",
+      "files": 1,
+      "lines": 14,
+      "meaningful": false
+    }
+  ],
+  "commitTimeline": [
+    {
+      "date": "2026-01-30",
+      "commits": 0
+    },
+    {
+      "date": "2026-01-31",
+      "commits": 0
+    },
+    {
+      "date": "2026-02-01",
+      "commits": 0
+    },
+    {
+      "date": "2026-02-02",
+      "commits": 0
+    },
+    {
+      "date": "2026-02-03",
+      "commits": 33
+    },
+    {
+      "date": "2026-02-04",
+      "commits": 59
+    },
+    {
+      "date": "2026-02-05",
+      "commits": 45
+    },
+    {
+      "date": "2026-02-06",
+      "commits": 41
+    },
+    {
+      "date": "2026-02-07",
+      "commits": 6
+    },
+    {
+      "date": "2026-02-08",
+      "commits": 14
+    },
+    {
+      "date": "2026-02-09",
+      "commits": 35
+    },
+    {
+      "date": "2026-02-10",
+      "commits": 61
+    },
+    {
+      "date": "2026-02-11",
+      "commits": 38
+    },
+    {
+      "date": "2026-02-12",
+      "commits": 29
+    },
+    {
+      "date": "2026-02-13",
+      "commits": 35
+    },
+    {
+      "date": "2026-02-14",
+      "commits": 11
+    },
+    {
+      "date": "2026-02-15",
+      "commits": 6
+    },
+    {
+      "date": "2026-02-16",
+      "commits": 17
+    },
+    {
+      "date": "2026-02-17",
+      "commits": 33
+    },
+    {
+      "date": "2026-02-18",
+      "commits": 41
+    },
+    {
+      "date": "2026-02-19",
+      "commits": 19
+    },
+    {
+      "date": "2026-02-20",
+      "commits": 23
+    },
+    {
+      "date": "2026-02-21",
+      "commits": 2
+    },
+    {
+      "date": "2026-02-22",
+      "commits": 2
+    },
+    {
+      "date": "2026-02-23",
+      "commits": 24
+    },
+    {
+      "date": "2026-02-24",
+      "commits": 35
+    },
+    {
+      "date": "2026-02-25",
+      "commits": 35
+    },
+    {
+      "date": "2026-02-26",
+      "commits": 24
+    },
+    {
+      "date": "2026-02-27",
+      "commits": 30
+    },
+    {
+      "date": "2026-02-28",
+      "commits": 15
+    },
+    {
+      "date": "2026-03-01",
+      "commits": 8
+    },
+    {
+      "date": "2026-03-02",
+      "commits": 27
+    },
+    {
+      "date": "2026-03-03",
+      "commits": 39
+    },
+    {
+      "date": "2026-03-04",
+      "commits": 59
+    },
+    {
+      "date": "2026-03-05",
+      "commits": 49
+    },
+    {
+      "date": "2026-03-06",
+      "commits": 49
+    },
+    {
+      "date": "2026-03-07",
+      "commits": 18
+    },
+    {
+      "date": "2026-03-08",
+      "commits": 12
+    },
+    {
+      "date": "2026-03-08",
+      "commits": 12
+    },
+    {
+      "date": "2026-03-09",
+      "commits": 46
+    },
+    {
+      "date": "2026-03-10",
+      "commits": 75
+    },
+    {
+      "date": "2026-03-11",
+      "commits": 34
+    },
+    {
+      "date": "2026-03-12",
+      "commits": 56
+    },
+    {
+      "date": "2026-03-13",
+      "commits": 33
+    },
+    {
+      "date": "2026-03-14",
+      "commits": 13
+    },
+    {
+      "date": "2026-03-15",
+      "commits": 12
+    },
+    {
+      "date": "2026-03-16",
+      "commits": 35
+    },
+    {
+      "date": "2026-03-17",
+      "commits": 17
+    },
+    {
+      "date": "2026-03-18",
+      "commits": 44
+    },
+    {
+      "date": "2026-03-19",
+      "commits": 63
+    },
+    {
+      "date": "2026-03-20",
+      "commits": 34
+    },
+    {
+      "date": "2026-03-21",
+      "commits": 9
+    },
+    {
+      "date": "2026-03-22",
+      "commits": 10
+    },
+    {
+      "date": "2026-03-23",
+      "commits": 32
+    },
+    {
+      "date": "2026-03-24",
+      "commits": 86
+    },
+    {
+      "date": "2026-03-25",
+      "commits": 96
+    },
+    {
+      "date": "2026-03-26",
+      "commits": 56
+    },
+    {
+      "date": "2026-03-27",
+      "commits": 78
+    },
+    {
+      "date": "2026-03-28",
+      "commits": 6
+    },
+    {
+      "date": "2026-03-29",
+      "commits": 8
+    },
+    {
+      "date": "2026-03-30",
+      "commits": 46
+    },
+    {
+      "date": "2026-03-31",
+      "commits": 60
+    },
+    {
+      "date": "2026-04-01",
+      "commits": 112
+    },
+    {
+      "date": "2026-04-02",
+      "commits": 76
+    },
+    {
+      "date": "2026-04-03",
+      "commits": 34
+    },
+    {
+      "date": "2026-04-04",
+      "commits": 10
+    },
+    {
+      "date": "2026-04-05",
+      "commits": 16
+    },
+    {
+      "date": "2026-04-06",
+      "commits": 78
+    },
+    {
+      "date": "2026-04-07",
+      "commits": 84
+    },
+    {
+      "date": "2026-04-08",
+      "commits": 48
+    },
+    {
+      "date": "2026-04-09",
+      "commits": 78
+    },
+    {
+      "date": "2026-04-10",
+      "commits": 54
+    },
+    {
+      "date": "2026-04-11",
+      "commits": 28
+    },
+    {
+      "date": "2026-04-12",
+      "commits": 2
+    },
+    {
+      "date": "2026-04-13",
+      "commits": 66
+    },
+    {
+      "date": "2026-04-14",
+      "commits": 74
+    },
+    {
+      "date": "2026-04-15",
+      "commits": 50
+    },
+    {
+      "date": "2026-04-16",
+      "commits": 35
+    },
+    {
+      "date": "2026-04-17",
+      "commits": 24
+    },
+    {
+      "date": "2026-04-18",
+      "commits": 0
+    },
+    {
+      "date": "2026-04-19",
+      "commits": 8
+    },
+    {
+      "date": "2026-04-20",
+      "commits": 23
+    },
+    {
+      "date": "2026-04-21",
+      "commits": 10
+    },
+    {
+      "date": "2026-04-22",
+      "commits": 5
+    },
+    {
+      "date": "2026-04-23",
+      "commits": 26
+    },
+    {
+      "date": "2026-04-24",
+      "commits": 16
+    },
+    {
+      "date": "2026-04-25",
+      "commits": 4
+    },
+    {
+      "date": "2026-04-26",
+      "commits": 1
+    },
+    {
+      "date": "2026-04-27",
+      "commits": 27
+    },
+    {
+      "date": "2026-04-28",
+      "commits": 44
+    },
+    {
+      "date": "2026-04-29",
+      "commits": 38
+    }
+  ],
+  "hotFiles": [
+    {
+      "file": "EntityTaxWorkspace.tsx",
+      "path": "apps/frontend/src/features/entityTax/components/workspace/EntityTaxWorkspace.tsx",
+      "changes": 43,
+      "area": "Entity Tax"
+    },
+    {
+      "file": "router.ex",
+      "path": "apps/backend/lib/workspacex_web/router.ex",
+      "changes": 41,
+      "area": null
+    },
+    {
+      "file": "consolidated_1099.ex",
+      "path": "apps/backend/lib/workspacex/tax/tax_document_pipeline_gemini/consolidated_1099.ex",
+      "changes": 38,
+      "area": "Tax"
+    },
+    {
+      "file": "AgentSubagentView.tsx",
+      "path": "apps/frontend/src/features/agent/components/AgentSubagentView.tsx",
+      "changes": 21,
+      "area": "Agent"
+    },
+    {
+      "file": "AgentChatPanel.tsx",
+      "path": "apps/frontend/src/features/agent/components/AgentChatPanel.tsx",
+      "changes": 17,
+      "area": "Agent"
+    },
+    {
+      "file": "agent_session_worker.ex",
+      "path": "apps/backend/lib/workspacex/agentic/agent_session_worker.ex",
+      "changes": 15,
+      "area": "Agentic"
+    },
+    {
+      "file": "AdHocAgentPage.tsx",
+      "path": "apps/frontend/src/pages/adHocAgent/AdHocAgentPage.tsx",
+      "changes": 15,
+      "area": null
+    },
+    {
+      "file": "taxDelivery.ts",
+      "path": "apps/frontend/src/api/endpoints/taxDelivery.ts",
+      "changes": 15,
+      "area": null
+    },
+    {
+      "file": "agentic.ex",
+      "path": "apps/backend/lib/workspacex/agentic.ex",
+      "changes": 14,
+      "area": null
+    },
+    {
+      "file": "ProjectTaxDeliveryPage.tsx",
+      "path": "apps/frontend/src/pages/projects/ProjectTaxDeliveryPage.tsx",
+      "changes": 14,
+      "area": null
+    },
+    {
+      "file": "TasksTabContent.tsx",
+      "path": "apps/frontend/src/components/primitives/tasks/TasksTabContent.tsx",
+      "changes": 14,
+      "area": null
+    },
+    {
+      "file": "consolidated_1099_oid.ex",
+      "path": "apps/backend/lib/workspacex/tax/tax_document_pipeline_gemini/consolidated_1099_oid.ex",
+      "changes": 14,
+      "area": "Tax"
+    },
+    {
+      "file": "tax_project_controller.ex",
+      "path": "apps/backend/lib/workspacex_web/controllers/api/v1/tax/tax_project_controller.ex",
+      "changes": 13,
+      "area": null
+    },
+    {
+      "file": "agent.ts",
+      "path": "apps/frontend/src/features/agent/types/agent.ts",
+      "changes": 13,
+      "area": "Agent"
+    },
+    {
+      "file": "consolidated_1099_gemini_extraction_worker.ex",
+      "path": "apps/backend/lib/workspacex_worker/tax/consolidated_1099_gemini_extraction_worker.ex",
+      "changes": 13,
+      "area": null
+    },
+    {
+      "file": "agent_session_worker_test.exs",
+      "path": "apps/backend/test/workspacex/agentic/agent_session_worker_test.exs",
+      "changes": 13,
+      "area": null
+    },
+    {
+      "file": "PaneGroup.tsx",
+      "path": "apps/frontend/src/components/primitives/pane-group/PaneGroup.tsx",
+      "changes": 12,
+      "area": null
+    },
+    {
+      "file": "entityTax.ts",
+      "path": "apps/frontend/src/types/entityTax.ts",
+      "changes": 12,
+      "area": null
+    },
+    {
+      "file": "TaxDeliveryLayout.tsx",
+      "path": "apps/frontend/src/features/taxDelivery/components/TaxDeliveryLayout.tsx",
+      "changes": 12,
+      "area": "Tax Delivery"
+    },
+    {
+      "file": "mix.exs",
+      "path": "apps/backend/mix.exs",
+      "changes": 12,
+      "area": null
+    }
+  ],
+  "recentCommits": [
+    {
+      "hash": "35cf17d",
+      "subject": "ci: skip Claude Code Review on dependabot PRs",
+      "author": "khn-ascend",
+      "date": "2026-04-30"
+    },
+    {
+      "hash": "b890a30",
+      "subject": "ci: fix two CI failures from monorepo split",
+      "author": "khn-ascend",
+      "date": "2026-04-29"
+    },
+    {
+      "hash": "60c1fc9",
+      "subject": "ci: restore Claude Code workflows for monorepo",
+      "author": "khn-ascend",
+      "date": "2026-04-29"
+    },
+    {
+      "hash": "ad2bdcf",
+      "subject": "ci: split monorepo GitHub Actions and release tags for backend vs frontend",
+      "author": "khn-ascend",
+      "date": "2026-04-15"
+    },
+    {
+      "hash": "81dc1ea",
+      "subject": "chore: add root conductor.json for monolith dev workflow",
+      "author": "Warley Franco",
+      "date": "2026-04-30"
+    },
+    {
+      "hash": "6936f0c",
+      "subject": "chore: update pnpm-lock.yaml after frontend sync",
+      "author": "Warley Franco",
+      "date": "2026-04-30"
+    },
+    {
+      "hash": "b5c10d6",
+      "subject": "fix(docker): pin compose project name to monolith",
+      "author": "Warley Franco",
+      "date": "2026-04-30"
+    },
+    {
+      "hash": "f3a85ee",
+      "subject": "feat(eval): Phase 3 golden-fixture regression for entity_tax skills [ET-301] (#2102)",
+      "author": "LW",
+      "date": "2026-04-30"
+    },
+    {
+      "hash": "aa039c3",
+      "subject": "feat(agentic): runtime contract enforcement + staging deploy fix [ET-301] (#2101)",
+      "author": "LW",
+      "date": "2026-04-30"
+    },
+    {
+      "hash": "45e78df",
+      "subject": "feat(popoutTabs): generic popoutable-tab primitive + workspace integration (#2418)",
+      "author": "Marcus Papin",
+      "date": "2026-04-29"
+    },
+    {
+      "hash": "aa4dd95",
+      "subject": "fix(tax-delivery): include delivery_status on project show endpoint (#2100)",
+      "author": "Danielle D'Souza",
+      "date": "2026-04-29"
+    },
+    {
+      "hash": "eaac3a5",
+      "subject": "fix(myWork): always render Activity section on task detail panel (#2419)",
+      "author": "Warley Franco",
+      "date": "2026-04-29"
+    },
+    {
+      "hash": "d245460",
+      "subject": "fix(pdf): show evidence-link bbox highlight on first click (#2417)",
+      "author": "Marcus Papin",
+      "date": "2026-04-29"
+    },
+    {
+      "hash": "afdc5bf",
+      "subject": "Use /status endpoint as single source of truth for subtask status (#2411)",
+      "author": "Marcus Papin",
+      "date": "2026-04-29"
+    },
+    {
+      "hash": "e3aac52",
+      "subject": "fix(vision): show View Prospect label when contact is a prospect (CRM-232) (#2416)",
+      "author": "Warley Franco",
+      "date": "2026-04-29"
+    },
+    {
+      "hash": "ce42bf7",
+      "subject": "feat(entityTax): auto-run task when all required documents match (#2414)",
+      "author": "Marcus Papin",
+      "date": "2026-04-29"
+    },
+    {
+      "hash": "71d1b45",
+      "subject": "refactor: replace colored file-type icons with extension chips (#2412)",
+      "author": "Marcus Papin",
+      "date": "2026-04-29"
+    },
+    {
+      "hash": "5fd3d8c",
+      "subject": "feat(tax): add RedactedDocument helper for fetching redacted PII outputs (#2095)",
+      "author": "khn-ascend",
+      "date": "2026-04-29"
+    },
+    {
+      "hash": "d05661a",
+      "subject": "refactor(agent): tidy finding sidebar action buttons (#2410)",
+      "author": "Marcus Papin",
+      "date": "2026-04-29"
+    },
+    {
+      "hash": "af04620",
+      "subject": "fix(crm-236): strip referrer signature from prospect-side extraction fields (#2098)",
+      "author": "ling-ascend",
+      "date": "2026-04-29"
+    },
+    {
+      "hash": "0719e72",
+      "subject": "feat(entityTax): make AgenticLayout left sidebar resizable (#2409)",
+      "author": "Marcus Papin",
+      "date": "2026-04-29"
+    },
+    {
+      "hash": "a48a8e2",
+      "subject": "fix(tax-delivery): derive signer names at read time for signature config (#2097)",
+      "author": "ssai-ascend",
+      "date": "2026-04-29"
+    },
+    {
+      "hash": "e32ffce",
+      "subject": "feat(tax-delivery): extract vouchers from voucher / payment-coupon pages (#2096)",
+      "author": "ssai-ascend",
+      "date": "2026-04-29"
+    },
+    {
+      "hash": "69c809c",
+      "subject": "fix(taxDelivery): hide redundant role label when signer name is null (#2408)",
+      "author": "devin-ai-integration[bot]",
+      "date": "2026-04-29"
+    },
+    {
+      "hash": "a0d7c0c",
+      "subject": "feat(tax-delivery): add status endpoint for delivery uploaded documents (#2094)",
+      "author": "ssai-ascend",
+      "date": "2026-04-29"
+    },
+    {
+      "hash": "e2ac9af",
+      "subject": "fix(tax-delivery): XML extractor accountant-impact fixes (#1 + #4 + #6 + #3) (#2093)",
+      "author": "ssai-ascend",
+      "date": "2026-04-29"
+    },
+    {
+      "hash": "a0dc119",
+      "subject": "fix: guard create project dialog v2 flow against stale and bypass states (#2407)",
+      "author": "Danielle D'Souza",
+      "date": "2026-04-29"
+    },
+    {
+      "hash": "4f4db5e",
+      "subject": "feat(crm-239): add pilot-firm pre-run validation script (#2092)",
+      "author": "ling-ascend",
+      "date": "2026-04-29"
+    },
+    {
+      "hash": "94e7665",
+      "subject": "feat(CRM-226): auto-approve suggestion tasks in intake pipeline (#2046)",
+      "author": "Warley Franco",
+      "date": "2026-04-29"
+    },
+    {
+      "hash": "0900f0d",
+      "subject": "feat(clientPortal): polish sign step UI (#2404)",
+      "author": "Danielle D'Souza",
+      "date": "2026-04-29"
+    }
+  ],
+  "commitsByDow": [
+    {
+      "day": "Mon",
+      "commits": 327
+    },
+    {
+      "day": "Tue",
+      "commits": 450
+    },
+    {
+      "day": "Wed",
+      "commits": 427
+    },
+    {
+      "day": "Thu",
+      "commits": 396
+    },
+    {
+      "day": "Fri",
+      "commits": 273
+    },
+    {
+      "day": "Sat",
+      "commits": 70
+    },
+    {
+      "day": "Sun",
+      "commits": 57
+    }
+  ]
+}
