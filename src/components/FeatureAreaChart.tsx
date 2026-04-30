@@ -6,9 +6,15 @@ interface Props {
   data: FeatureArea[]
   title: string
   sub?: string
-  accentColor: string    // tailwind bg class for bars e.g. 'bg-blue-500'
-  accentText: string     // tailwind text class e.g. 'text-blue-400'
-  badgeClass: string     // tailwind class for the top-label badge
+  accentColor: string
+  accentText: string
+  badgeClass: string
+}
+
+const STATE_BADGE: Record<string, string> = {
+  active:      'bg-green-500/15 text-green-400 border-green-500/25',
+  maintenance: 'bg-yellow-500/15 text-yellow-400 border-yellow-500/25',
+  dormant:     'bg-gray-700/40 text-gray-500 border-gray-600/20',
 }
 
 function fmtLines(n: number) {
@@ -44,9 +50,11 @@ export function FeatureAreaChart({ data, title, sub, accentColor, accentText, ba
                     {i + 1}
                   </span>
                   <span className="text-sm font-medium text-white truncate">{area.label}</span>
+                  <span className={`text-[9px] font-medium px-1.5 py-0.5 rounded border shrink-0 ${STATE_BADGE[area.activityState]}`}>
+                    {area.activityState === 'active' ? `${area.recentCommits} commits` : area.activityState}
+                  </span>
                 </div>
                 <div className="flex items-center gap-3 shrink-0 ml-3">
-                  <span className="text-xs text-gray-500">{area.files} files</span>
                   <span className={`text-xs font-mono font-semibold ${accentText} w-14 text-right`}>
                     {fmtLines(area.lines)}
                   </span>
