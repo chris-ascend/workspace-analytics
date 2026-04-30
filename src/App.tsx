@@ -77,7 +77,7 @@ export default function App() {
   }
 
   const {
-    summary, totals, weekLabels,
+    summary, weekLabels,
     whereWeAreBuilding, investmentAllocation,
     frontendFeatures, backendDomains, frontendByLOC, backendByLOC,
     languageStats, commitTimeline, hotFiles, recentCommits,

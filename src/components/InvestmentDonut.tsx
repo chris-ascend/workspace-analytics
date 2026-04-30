@@ -69,7 +69,7 @@ export function InvestmentDonut({ data, commitsLast30, commitsPrev30 }: Props) {
                   <span style={{ color: '#4a5464', fontSize: 12 }}>
                     {value}{' '}
                     <span style={{ color: entry.color, fontWeight: 700 }}>
-                      {(entry.payload as InvestmentBucket).pct}%
+                      {(entry.payload as unknown as InvestmentBucket).pct}%
                     </span>
                   </span>
                 )}
